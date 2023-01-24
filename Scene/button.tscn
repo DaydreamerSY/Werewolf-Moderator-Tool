@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Asset/font/Players.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Asset/Buttons/Item2.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Buttons/button.gd" type="Script" id=4]
+
+[node name="button" type="TextureButton"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -435.0
+margin_top = -598.0
+margin_right = -200.0
+margin_bottom = -524.0
+texture_normal = ExtResource( 2 )
+expand = true
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -24.0
+margin_right = 105.0
+margin_bottom = 24.0
+custom_fonts/font = ExtResource( 1 )
+text = "Roles"
+align = 1
+
+[connection signal="button_down" from="." to="." method="_on_button_button_down"]
+[connection signal="button_up" from="." to="." method="_on_button_button_up"]

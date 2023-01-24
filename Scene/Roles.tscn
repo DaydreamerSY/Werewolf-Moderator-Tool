@@ -1,0 +1,430 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Asset/font/Players.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Asset/Buttons/Icon_X.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Buttons/btnOk.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Buttons/btnDanger.png" type="Texture" id=4]
+[ext_resource path="res://Script/InterfaceController.gd" type="Script" id=5]
+[ext_resource path="res://Scene/button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Script/Players.gd" type="Script" id=7]
+[ext_resource path="res://Scene/list_player_element.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Script/Popup Add Player.gd" type="Script" id=9]
+[ext_resource path="res://Custom Resource/Resource Player.tres" type="Resource" id=10]
+[ext_resource path="res://Asset/font/Title.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Asset/font/Popup Title.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Script/Popup Update Player.gd" type="Script" id=13]
+[ext_resource path="res://Asset/Label/Item4.png" type="Texture" id=14]
+[ext_resource path="res://Asset/Buttons/Item3.png" type="Texture" id=15]
+[ext_resource path="res://Asset/font/MilkyNice.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://Asset/Buttons/Icon_Left.png" type="Texture" id=17]
+[ext_resource path="res://Asset/Buttons/Icon_Right.png" type="Texture" id=18]
+[ext_resource path="res://Script/Navigator.gd" type="Script" id=19]
+[ext_resource path="res://Script/Popup Role Select.gd" type="Script" id=20]
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 16 )
+
+[node name="Players" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Title" type="Control" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -540.0
+margin_right = 540.0
+margin_bottom = 192.0
+
+[node name="TextureRect" type="TextureRect" parent="Title"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -276.0
+margin_top = 32.0
+margin_right = 289.0
+margin_bottom = 240.0
+texture = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Title"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -188.0
+margin_right = 188.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 11 )
+text = "SET UP"
+align = 1
+valign = 1
+
+[node name="Action List" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -540.0
+margin_top = -512.0
+margin_right = 540.0
+margin_bottom = 512.0
+
+[node name="List" type="Control" parent="Action List"]
+margin_top = -256.0
+margin_right = 1080.0
+margin_bottom = 768.0
+script = ExtResource( 7 )
+list_element_scence = ExtResource( 8 )
+player_list = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Action List/List"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -412.0
+margin_top = -412.0
+margin_right = 412.0
+margin_bottom = 412.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="GridContainer" type="GridContainer" parent="Action List/List"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.0
+margin_top = -248.0
+margin_right = 304.0
+margin_bottom = 328.0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+custom_constants/vseparation = 25
+custom_constants/hseparation = 100
+columns = 2
+
+[node name="labelPlayer" type="Label" parent="Action List/List"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -98.5
+margin_top = -344.0
+margin_right = 98.5
+margin_bottom = -278.0
+custom_fonts/font = SubResource( 2 )
+text = "Roles"
+align = 1
+valign = 1
+
+[node name="Navigator" type="Control" parent="Action List"]
+margin_top = 768.0
+margin_right = 1080.0
+margin_bottom = 896.0
+script = ExtResource( 19 )
+
+[node name="Prev" type="TextureButton" parent="Action List/Navigator"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -140.0
+margin_top = -32.5
+margin_right = -94.0
+margin_bottom = 32.5
+texture_normal = ExtResource( 17 )
+expand = true
+
+[node name="Next" type="TextureButton" parent="Action List/Navigator"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 92.0
+margin_top = -32.5
+margin_right = 138.0
+margin_bottom = 32.5
+texture_normal = ExtResource( 18 )
+expand = true
+
+[node name="Label" type="Label" parent="Action List/Navigator"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -18.0
+margin_right = 20.0
+margin_bottom = 18.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Interface" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -540.0
+margin_top = -512.0
+margin_right = 540.0
+margin_bottom = -380.0
+script = ExtResource( 5 )
+
+[node name="btnAddPlayer" parent="Interface" instance=ExtResource( 6 )]
+anchor_left = 0.0
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+margin_left = 80.0
+margin_top = -37.0
+margin_right = 315.0
+margin_bottom = 37.0
+
+[node name="Label" parent="Interface/btnAddPlayer" index="0"]
+text = "1. Add Players"
+valign = 1
+
+[node name="btnRoles" parent="Interface" instance=ExtResource( 6 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -117.5
+margin_top = -37.0
+margin_right = 117.5
+margin_bottom = 37.0
+
+[node name="Label" parent="Interface/btnRoles" index="0"]
+text = "2. Roles"
+valign = 1
+
+[node name="btnBegin" parent="Interface" instance=ExtResource( 6 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -312.0
+margin_top = -34.0
+margin_right = -77.0
+margin_bottom = 40.0
+
+[node name="Label" parent="Interface/btnBegin" index="0"]
+text = "3. Begin"
+valign = 1
+
+[node name="Popup" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+
+[node name="Popup Add Player" type="Control" parent="Popup"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+script = ExtResource( 9 )
+player_list = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Popup/Popup Add Player"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -434.0
+margin_top = -370.0
+margin_right = 436.0
+margin_bottom = 104.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="btnCancel" parent="Popup/Popup Add Player" instance=ExtResource( 6 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -333.0
+margin_top = -37.0
+margin_right = -98.0
+margin_bottom = 37.0
+texture_normal = ExtResource( 4 )
+
+[node name="Label" parent="Popup/Popup Add Player/btnCancel" index="0"]
+text = "Cancel"
+valign = 1
+
+[node name="btnOk" parent="Popup/Popup Add Player" instance=ExtResource( 6 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 108.0
+margin_top = -37.0
+margin_right = 343.0
+margin_bottom = 37.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" parent="Popup/Popup Add Player/btnOk" index="0"]
+text = "Add"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="Popup/Popup Add Player"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -342.0
+margin_top = -259.0
+margin_right = 343.0
+margin_bottom = -168.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+
+[node name="Title" type="Label" parent="Popup/Popup Add Player"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -147.5
+margin_top = -332.0
+margin_right = 147.5
+margin_bottom = -264.0
+custom_fonts/font = ExtResource( 12 )
+text = "Add Player"
+align = 1
+valign = 1
+
+[node name="btnAddPlayerExit" type="TextureButton" parent="Popup/Popup Add Player"]
+margin_left = 384.0
+margin_top = -364.0
+margin_right = 464.0
+margin_bottom = -284.0
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Popup Update Player" type="Control" parent="Popup"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+script = ExtResource( 13 )
+player_list = ExtResource( 10 )
+
+[node name="TextureRect" type="TextureRect" parent="Popup/Popup Update Player"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -434.0
+margin_top = -370.0
+margin_right = 436.0
+margin_bottom = 104.0
+texture = ExtResource( 15 )
+expand = true
+
+[node name="btnDelete" parent="Popup/Popup Update Player" instance=ExtResource( 6 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -333.0
+margin_top = -37.0
+margin_right = -98.0
+margin_bottom = 37.0
+texture_normal = ExtResource( 4 )
+
+[node name="Label" parent="Popup/Popup Update Player/btnDelete" index="0"]
+text = "Delete"
+valign = 1
+
+[node name="btnUpdate" parent="Popup/Popup Update Player" instance=ExtResource( 6 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 108.0
+margin_top = -37.0
+margin_right = 343.0
+margin_bottom = 37.0
+texture_normal = ExtResource( 3 )
+
+[node name="Label" parent="Popup/Popup Update Player/btnUpdate" index="0"]
+text = "Change Name"
+valign = 1
+
+[node name="LineEdit" type="LineEdit" parent="Popup/Popup Update Player"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -342.0
+margin_top = -259.0
+margin_right = 343.0
+margin_bottom = -168.0
+custom_fonts/font = ExtResource( 1 )
+align = 1
+
+[node name="Title" type="Label" parent="Popup/Popup Update Player"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -60.0
+margin_top = -332.0
+margin_right = 60.0
+margin_bottom = -264.0
+custom_fonts/font = ExtResource( 12 )
+text = "EDIT"
+align = 1
+valign = 1
+
+[node name="btnUpdatePlayerExit" type="TextureButton" parent="Popup/Popup Update Player"]
+margin_left = 384.0
+margin_top = -364.0
+margin_right = 464.0
+margin_bottom = -284.0
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="Popup Role Select" type="Control" parent="Popup"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 20 )
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -120.0
+margin_right = 1080.0
+custom_fonts/font = SubResource( 1 )
+text = "Asset by: Penzilla
+https://penzilla.itch.io/handdrawn-vector-icon-pack"
+valign = 2
+
+[connection signal="item_pressed" from="Action List/List" to="Interface" method="_on_List_item_pressed"]
+[connection signal="pressed" from="Action List/Navigator/Prev" to="Action List/List" method="_on_Prev_pressed"]
+[connection signal="pressed" from="Action List/Navigator/Next" to="Action List/List" method="_on_Next_pressed"]
+[connection signal="item_id" from="Interface" to="Popup/Popup Update Player" method="_on_Interface_item_id"]
+[connection signal="pressed" from="Interface/btnAddPlayer" to="Interface" method="_on_btnAddPlayer_pressed"]
+[connection signal="isOpen" from="Popup/Popup Add Player" to="Interface" method="_on_Popup_Add_Player_isOpen"]
+[connection signal="pressed" from="Popup/Popup Add Player/btnCancel" to="Interface" method="_on_btnCancel_pressed"]
+[connection signal="pressed" from="Popup/Popup Add Player/btnOk" to="Popup/Popup Add Player" method="_on_btnOk_pressed"]
+[connection signal="pressed" from="Popup/Popup Add Player/btnAddPlayerExit" to="Interface" method="_on_btnAddPlayerExit_pressed"]
+[connection signal="isOpen" from="Popup/Popup Update Player" to="Interface" method="_on_Popup_Add_Player_isOpen"]
+[connection signal="isOpen" from="Popup/Popup Update Player" to="Interface" method="_on_Popup_Update_Player_isOpen"]
+[connection signal="pressed" from="Popup/Popup Update Player/btnDelete" to="Popup/Popup Update Player" method="_on_btnDelete_pressed"]
+[connection signal="pressed" from="Popup/Popup Update Player/btnUpdate" to="Popup/Popup Update Player" method="_on_btnUpdate_pressed"]
+[connection signal="pressed" from="Popup/Popup Update Player/btnUpdatePlayerExit" to="Interface" method="_on_btnUpdatePlayerExit_pressed"]
+
+[editable path="Interface/btnAddPlayer"]
+[editable path="Interface/btnRoles"]
+[editable path="Interface/btnBegin"]
+[editable path="Popup/Popup Add Player/btnCancel"]
+[editable path="Popup/Popup Add Player/btnOk"]
+[editable path="Popup/Popup Update Player/btnDelete"]
+[editable path="Popup/Popup Update Player/btnUpdate"]
