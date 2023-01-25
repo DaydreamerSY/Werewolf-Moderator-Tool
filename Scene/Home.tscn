@@ -1,9 +1,10 @@
-[gd_scene load_steps=36 format=3 uid="uid://c5fkmdnk6ya8h"]
+[gd_scene load_steps=36 format=3 uid="uid://brnl7tg7bbbtn"]
 
+[ext_resource type="Script" path="res://Script/MovePoint.gd" id="1_885wy"]
 [ext_resource type="FontFile" path="res://Asset/font/Title.tres" id="3"]
-[ext_resource type="Script" path="res://Script/Popup Add Player.gd" id="5"]
+[ext_resource type="Script" path="res://Script/PopupAddPlayer.gd" id="5"]
 [ext_resource type="Script" path="res://Script/InterfaceController.gd" id="6"]
-[ext_resource type="Script" path="res://Script/Popup Update Player.gd" id="8"]
+[ext_resource type="Script" path="res://Script/PopupUpdatePlayer.gd" id="8"]
 [ext_resource type="Texture2D" uid="uid://25blc46js2f0" path="res://Asset/Buttons/IconLeft.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://cfnus2sxtykm7" path="res://Asset/Buttons/btnDanger.png" id="10"]
 [ext_resource type="Texture2D" uid="uid://bjfhlmp5l8vcv" path="res://Asset/Buttons/btnOk.png" id="11"]
@@ -13,14 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://c1exsv1le6if4" path="res://Asset/Buttons/IconAdd.png" id="14"]
 [ext_resource type="Texture2D" uid="uid://dpfftg16kumn4" path="res://Asset/Buttons/IconX.png" id="15"]
 [ext_resource type="Texture2D" uid="uid://3hx667r4drl6" path="res://Asset/Buttons/IconRight.png" id="16"]
-[ext_resource type="PackedScene" uid="uid://crt0n83opwlcl" path="res://Scene/ListPlayerElement.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://dwh4hm4pnldip" path="res://Scene/ListPlayerElement.tscn" id="18"]
 [ext_resource type="Script" path="res://Script/Roles.gd" id="19"]
 [ext_resource type="Script" path="res://Script/Players.gd" id="20"]
 [ext_resource type="Resource" path="res://Custom Resource/ResourcePlayer.tres" id="21"]
-[ext_resource type="Script" path="res://script/Move Point.gd" id="23"]
 [ext_resource type="Script" path="res://Asset/Buttons/button.gd" id="24"]
 [ext_resource type="Resource" path="res://Custom Resource/ResourceRole.tres" id="25"]
-[ext_resource type="PackedScene" uid="uid://clh8ttqkm6dok" path="res://Scene/ListRoleElement.tscn" id="26"]
+[ext_resource type="PackedScene" uid="uid://dae5e43qvstfs" path="res://Scene/ListRoleElement.tscn" id="26"]
 [ext_resource type="Texture2D" uid="uid://qkqqt361lxmv" path="res://Asset/Buttons/IconDotsHorizontal.png" id="27"]
 [ext_resource type="Texture2D" uid="uid://fchds0tojmwx" path="res://Asset/Buttons/IconTube.png" id="28"]
 [ext_resource type="Texture2D" uid="uid://dagewp2cj8ls0" path="res://Asset/Character/Villager/6.png" id="29"]
@@ -50,7 +50,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("23")
+script = ExtResource("1_885wy")
 
 [node name="Menu" type="Node2D" parent="."]
 position = Vector2(540, 960)
@@ -299,9 +299,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 368.0
+offset_left = 373.0
 offset_top = -386.0
-offset_right = 448.0
+offset_right = 453.0
 offset_bottom = -306.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -437,10 +437,17 @@ theme_override_font_sizes/font_size = 50
 text = "EDIT"
 
 [node name="btnUpdatePlayerExit" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
-offset_left = 908.0
-offset_top = 574.0
-offset_right = 988.0
-offset_bottom = 654.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 372.0
+offset_top = -386.0
+offset_right = 452.0
+offset_bottom = -306.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("15")
 ignore_texture_size = true
 stretch_mode = 0

@@ -1,6 +1,5 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1674638930
-default_env.tres::Environment::-1::1674635514::0::1::::<><>::
+::res://::1674641604
 export_presets.cfg::TextFile::-1::1674634924::0::1::::<><>::
 icon.png::CompressedTexture2D::4831812399819432145::1674634924::1674635531::1::::<><>::
 README.md::TextFile::-1::1674634924::0::1::::<><>::
@@ -46,17 +45,17 @@ ResourcePlayer.gd::GDScript::-1::1674635514::0::1::::ResourcePlayers<>Resource<>
 ResourcePlayer.tres::Resource::-1::1674637538::0::1::::<><>::res://Custom Resource/ResourcePlayer.gd
 ResourceRole.tres::Resource::-1::1674637545::0::1::::<><>::res://Custom Resource/ResourceRoles.gd
 ResourceRoles.gd::GDScript::-1::1674635514::0::1::::ResourceRoles<>Resource<>::
-::res://Scene/::1674638833
-Home.tscn::PackedScene::6889457342901228825::1674638833::0::1::::<><>::res://Asset/font/Title.tres<>res://Script/Popup Add Player.gd<>res://Script/InterfaceController.gd<>res://Script/Popup Role Select.gd<>res://Script/Popup Update Player.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://crt0n83opwlcl<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://script/Move Point.gd<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://clh8ttqkm6dok<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://bsowx5etl2bg<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
-ListPlayerElement.tscn::PackedScene::6006817803881910491::1674638367::0::1::::<><>::res://Asset/Buttons/Item2.png<>res://Script/list_player_element.gd<>res://Asset/font/MilkyNice.ttf<>res://Asset/Buttons/IconWrite.png
-ListRoleElement.tscn::PackedScene::5561407905660599146::1674638383::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/list_role_element.gd<>uid://b8v3wi1cuh2pa<>uid://c3g1d2275ia82
-::res://Script/::1674635931
-InterfaceController.gd::GDScript::-1::1674635514::0::1::::<>Control<>::
-list_player_element.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
-list_role_element.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
-Move Point.gd::GDScript::-1::1674635514::0::1::::<>Node<>::
+::res://Scene/::1674641578
+Home.tscn::PackedScene::3607193977335606703::1674641578::0::1::::<><>::res://Asset/font/Title.tres<>res://Script/PopupAddPlayer.gd<>res://Script/InterfaceController.gd<>res://Script/PopupUpdatePlayer.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://dwh4hm4pnldip<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://script/Move Point.gd<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://dae5e43qvstfs<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://bsowx5etl2bg<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
+ListPlayerElement.tscn::PackedScene::8719641224520865395::1674641578::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListPlayerElement.gd<>uid://b8v3wi1cuh2pa<>uid://b8lvtu6wyxcis
+ListRoleElement.tscn::PackedScene::7169349782241593064::1674641578::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListRoleElement.gd<>uid://b8v3wi1cuh2pa<>uid://c3g1d2275ia82
+::res://Script/::1674641561
+InterfaceController.gd::GDScript::-1::1674640169::0::1::::<>Control<>::
+ListPlayerElement.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
+ListRoleElement.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
+MovePoint.gd::GDScript::-1::1674639129::0::1::::<>Node<>::
 Players.gd::GDScript::-1::1674635931::0::1::::<>Control<>::
-Popup Add Player.gd::GDScript::-1::1674635885::0::1::::<>Control<>::
-Popup Role Select.gd::GDScript::-1::1674635514::0::1::::<>Control<>::
-Popup Update Player.gd::GDScript::-1::1674635896::0::1::::<>Control<>::
+PopupAddPlayer.gd::GDScript::-1::1674639420::0::1::::<>Control<>::
+PopupRoleSelect.gd::GDScript::-1::1674635514::0::1::::<>Control<>::
+PopupUpdatePlayer.gd::GDScript::-1::1674640365::0::1::::<>Control<>::
 Roles.gd::GDScript::-1::1674635916::0::1::::<>Control<>::
