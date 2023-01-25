@@ -1,7 +1,9 @@
 extends Node
 
+signal scene_changed(scene_name)
 
-signal swipe_direction(direction, )
+@export
+var scene_name : String = "Home"
 
 var swipe_start = null
 var minimum_drag = 20
@@ -19,6 +21,9 @@ var menu
 var man
 
 var move_speed = 0.5
+
+var title_text_default = "SET UP"
+var title_text_letgo = "LET GO!!"
 
 func _ready():
 	menu = get_node("Menu")
@@ -42,13 +47,9 @@ func _calculate_swipe(swipe_end):
 	var swipe = swipe_end - swipe_start
 	if abs(swipe.x) > minimum_drag:
 		if swipe.x > 0:
-#			_right()
-			emit_signal("swipe_direction", "right")
 			print("swipe to right so screen should move to left " + str(current_screen))
 			move_left()
 		else:
-#			_left()
-			emit_signal("swipe_direction", "left")
 			print("swipe to left so screen should move to right " + str(current_screen))
 			move_right()
 
@@ -62,6 +63,11 @@ func move_left():
 			man.position.x - 400, move_speed)
 		TW.tween_callback(Callable(self,"_set_false_is_moving"))
 		current_screen -= 1
+		
+	if current_screen == screen_amount_max:
+		$Title/Label.text = title_text_letgo
+	else:
+		$Title/Label.text = title_text_default
 
 func move_right():
 	if current_screen < screen_amount_max:
@@ -73,7 +79,17 @@ func move_right():
 			man.position.x + 400, move_speed)
 		TW.tween_callback(Callable(self,"_set_false_is_moving"))
 		current_screen += 1
+	
+	if current_screen == screen_amount_max:
+		$Title/Label.text = title_text_letgo
+	else:
+		$Title/Label.text = title_text_default
 
 func _set_false_is_moving():
 	print("set false moving")
 	is_moving = false
+
+
+func _on_begin_night_pressed():
+	emit_signal("scene_changed", scene_name)
+	print("Emited signal")

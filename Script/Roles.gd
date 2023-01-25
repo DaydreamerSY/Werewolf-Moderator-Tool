@@ -31,10 +31,10 @@ func _ready():
 	pass
 
 
-func _create_item_on_list(name, is_trigger):
+func _create_item_on_list(role_name, is_trigger):
 	var _btnRoleN = list_role_element_scence.instantiate()
 #	_btnRoleN.set_position(Vector2(posx, posy))
-	_btnRoleN.get_node("Role").text = name
+	_btnRoleN.get_node("Role").text = role_name
 	_btnRoleN.connect("pressed",Callable(self,"_on_list_element_pressed").bind(_btnRoleN))
 	grid_container.add_child(_btnRoleN) 
 	if is_trigger:
@@ -47,18 +47,18 @@ func _load_list():
 	
 	
 	var list = roles_list._get_list()
-	var size = list.size()
+	var _size = list.size()
 	
-	print("\nSize: " + str(size))
+	print("\nSize: " + str(_size))
 	
 	if is_open_1st:
-		if size > max_per_page:
+		if _size > max_per_page:
 			print("go this fist")
 			navigator.visible = true
 			end_page = max_per_page
 		else:
 			print("go this second")
-			end_page = size
+			end_page = _size
 			navigator.visible = false
 
 	print("Page: " + str(page))
@@ -73,25 +73,25 @@ func _load_list():
 func _on_list_change(new_list):
 	_delete_children()
 	
-	var size = new_list.size()
+	var _size = new_list.size()
 
-	if size > max_per_page:
+	if _size > max_per_page:
 		navigator.visible = true
-		if max_per_page * (page + 1) < size:
+		if max_per_page * (page + 1) < _size:
 			end_page = max_per_page * (page + 1)
 		else:
-			end_page = size
+			end_page = _size
 	else:
 		navigator.visible = false
 
-	if size == max_per_page:
+	if _size == max_per_page:
 		page = 1
 		page_label.text = str(page + 1)
 		start_page = 0
 		end_page = max_per_page
 		
-	if size < max_per_page:
-		end_page = size
+	if _size < max_per_page:
+		end_page = _size
 
 	for i in range(start_page, end_page):
 		var _btnRoleN = list_role_element_scence.instantiate()
@@ -125,16 +125,16 @@ func _on_Prev_pressed():
 
 
 func _on_Next_pressed():
-	var size = roles_list._get_list().size()
+	var _size = roles_list._get_list().size()
 	
-	if page < (size / max_per_page):
+	if page < (_size / max_per_page):
 		page += 1
 		start_page = max_per_page * page
 		
-		if max_per_page * (page + 1) < size:
+		if max_per_page * (page + 1) < _size:
 			end_page = max_per_page * (page + 1)
 		else:
-			end_page = size
+			end_page = _size
 	
 	_delete_children()
 	_load_list()

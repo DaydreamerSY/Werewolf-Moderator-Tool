@@ -3,6 +3,8 @@ res://Asset/font/Popup Title.tres::78f67c6232518d3f47123c2e1a4de494::1674635514:
 res://Asset/font/Title.tres::377f464ed6342edfab02be1ed0e5523f::1674635514::res://.godot/exported/133200997/export-d3c8804f84d7c35a63af28c9d95199d3-Title.res
 res://Custom Resource/ResourcePlayer.tres::5ce348bbe82b022ed2339e88baf74696::1674637538::res://.godot/exported/133200997/export-98be3a0a5609fb3bf80439d22801f575-ResourcePlayer.res
 res://Custom Resource/ResourceRole.tres::8ff47e45fae91e18d20ee50b3ee9bbdc::1674637545::res://.godot/exported/133200997/export-d8f0533b587ce7bb6303e819078b85f0-ResourceRole.res
-res://Scene/Home.tscn::6ee86aa0f7d9d5c411378dab86c6bc71::1674643826::res://.godot/exported/133200997/export-a208c0125ca5a868f770da687673c417-Home.scn
+res://Scene/Home.tscn::17ec649245c151bd0e7482d4349bebd1::1674659769::res://.godot/exported/133200997/export-a208c0125ca5a868f770da687673c417-Home.scn
 res://Scene/ListPlayerElement.tscn::bda0f524a76dd0cadeda7cb618137f67::1674642019::res://.godot/exported/133200997/export-928dcb8b9ab477d8e06cf0a1f78e84a5-ListPlayerElement.scn
 res://Scene/ListRoleElement.tscn::97a457015d88a1c303c34b216905be1d::1674642019::res://.godot/exported/133200997/export-0260da81e2f210086276f9100cc83c9d-ListRoleElement.scn
+res://Scene/Night.tscn::63703f640c86d735d216969b8159e2d5::1674659769::res://.godot/exported/133200997/export-92c404c0df809d05e39b1e4dbe8b39f6-Night.scn
+res://Scene/SceneSwitcher.tscn::4c0ba96438cefd9efe91b5641ce81584::1674659769::res://.godot/exported/133200997/export-bbce1e03f07f8335b5b772025c36ebe9-SceneSwitcher.scn

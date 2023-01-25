@@ -31,13 +31,13 @@ func _ready():
 	pass 
 	
 	
-func _create_item_on_list(name, id):
-	var __btnRoleN = list_element_scence.instantiate()
-#	__btnRoleN.set_position(Vector2(posx, posy))
-	__btnRoleN.get_node("Name").text = name
-	__btnRoleN.get_node("Id").text = str(id)
-	__btnRoleN.connect("pressed",Callable(self,"_on_list_element_pressed").bind(__btnRoleN))
-	grid_container.add_child(__btnRoleN)
+func _create_item_on_list(player_name, id):
+	var _btnRoleN = list_element_scence.instantiate()
+#	_btnRoleN.set_position(Vector2(posx, posy))
+	_btnRoleN.get_node("Name").text = player_name
+	_btnRoleN.get_node("Id").text = str(id)
+	_btnRoleN.connect("pressed",Callable(self,"_on_list_element_pressed").bind(_btnRoleN))
+	grid_container.add_child(_btnRoleN)
 
 
 func _load_list():
@@ -45,18 +45,18 @@ func _load_list():
 	
 	
 	var list = player_list._get_list()
-	var size = list.size()
+	var _size = list.size()
 	
-	print("\nSize: " + str(size))
+	print("\nSize: " + str(_size))
 	
 	if is_open_1st:
-		if size > max_per_page:
+		if _size > max_per_page:
 			print("go this fist")
 			navigator.visible = true
 			end_page = max_per_page
 		else:
 			print("go this second")
-			end_page = size
+			end_page = _size
 			navigator.visible = false
 		
 	
@@ -65,7 +65,7 @@ func _load_list():
 	print("End page: " + str(end_page))
 		
 	for i in range(start_page, end_page):
-		var __btnRoleN = list_element_scence.instantiate()
+		var _btnRoleN = list_element_scence.instantiate()
 		_create_item_on_list(list[i]["name"], list[i]["id"])
 
 
@@ -73,28 +73,28 @@ func _load_list():
 func _on_list_change(new_list):
 	_delete_children()
 
-	var size = new_list.size()
+	var _size = new_list.size()
 
-	if size > max_per_page:
+	if _size > max_per_page:
 		navigator.visible = true
-		if max_per_page * (page + 1) < size:
+		if max_per_page * (page + 1) < _size:
 			end_page = max_per_page * (page + 1)
 		else:
-			end_page = size
+			end_page = _size
 	else:
 		navigator.visible = false
 
-	if size == max_per_page:
+	if _size == max_per_page:
 		page = 1
 		page_label.text = str(page + 1)
 		start_page = 0
 		end_page = max_per_page
 		
-	if size < max_per_page:
-		end_page = size
+	if _size < max_per_page:
+		end_page = _size
 
 	for i in range(start_page, end_page):
-		var __btnRoleN = list_element_scence.instantiate()
+		var _btnRoleN = list_element_scence.instantiate()
 		_create_item_on_list(new_list[i]["name"], new_list[i]["id"])
 
 
@@ -116,7 +116,6 @@ func _on_list_element_pressed(btnPlayer):
 
 
 func _on_Prev_pressed():
-	var size = player_list._get_list().size()
 	if page > 0:
 		page -= 1
 		start_page = max_per_page * page
@@ -129,16 +128,16 @@ func _on_Prev_pressed():
 
 
 func _on_Next_pressed():
-	var size = player_list._get_list().size()
+	var _size = player_list._get_list().size()
 	
-	if page < (size / max_per_page):
+	if page < (_size / max_per_page):
 		page += 1
 		start_page = max_per_page * page
 		
-		if max_per_page * (page + 1) < size:
+		if max_per_page * (page + 1) < _size:
 			end_page = max_per_page * (page + 1)
 		else:
-			end_page = size
+			end_page = _size
 	
 	_delete_children()
 	_load_list()

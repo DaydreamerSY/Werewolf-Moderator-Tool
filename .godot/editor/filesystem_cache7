@@ -1,10 +1,10 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1674644119
+::res://::1674657393
 export_presets.cfg::TextFile::-1::1674634924::0::1::::<><>::
 icon.png::CompressedTexture2D::4831812399819432145::1674634924::1674635531::1::::<><>::
 README.md::TextFile::-1::1674634924::0::1::::<><>::
-::res://Asset/::1674638381
-::res://Asset/Buttons/::1674644119
+::res://Asset/::1674657381
+::res://Asset/Buttons/::1674657393
 btnDanger.png::CompressedTexture2D::5151870427533052336::1674634924::1674635531::1::::<><>::
 btnList.png::CompressedTexture2D::5772776510545129366::1674634924::1674635531::1::::<><>::
 btnOk.png::CompressedTexture2D::3028887482719362277::1674634924::1674635531::1::::<><>::
@@ -16,6 +16,7 @@ IconCheck.png::CompressedTexture2D::6752100716303622621::1674634924::1674638322:
 IconDotsHorizontal.png::CompressedTexture2D::1144666362977736289::1674634924::1674638329::1::::<><>::
 IconDoubleArrow.png::CompressedTexture2D::6204701247595580455::1674644018::1674644120::1::::<><>::
 IconDown.png::CompressedTexture2D::6490490466871030434::1674634924::1674638333::1::::<><>::
+IconExit.png::CompressedTexture2D::4797033547335388321::1674657376::1674657393::1::::<><>::
 IconGhost.png::CompressedTexture2D::8146664869925777907::1674634924::1674638338::1::::<><>::
 IconLeft.png::CompressedTexture2D::1957110622841680367::1674634924::1674638343::1::::<><>::
 IconLightning.png::CompressedTexture2D::323663954824867312::1674634924::1674638349::1::::<><>::
@@ -48,17 +49,20 @@ ResourcePlayer.gd::GDScript::-1::1674635514::0::1::::ResourcePlayers<>Resource<>
 ResourcePlayer.tres::Resource::-1::1674637538::0::1::::<><>::res://Custom Resource/ResourcePlayer.gd
 ResourceRole.tres::Resource::-1::1674637545::0::1::::<><>::res://Custom Resource/ResourceRoles.gd
 ResourceRoles.gd::GDScript::-1::1674643372::0::1::::ResourceRoles<>Resource<>::
-::res://Scene/::1674643894
-Home.tscn::PackedScene::3607193977335606703::1674643894::0::1::::<><>::res://Script/MovePoint.gd<>res://Asset/font/Title.tres<>res://Script/PopupAddPlayer.gd<>res://Script/InterfaceController.gd<>res://Script/PopupUpdatePlayer.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://dwh4hm4pnldip<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://dae5e43qvstfs<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://bsowx5etl2bg<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
+::res://Scene/::1674657234
+Home.tscn::PackedScene::3607193977335606703::1674656890::0::1::::<><>::res://Script/MovePoint.gd<>res://Asset/font/Title.tres<>res://Script/PopupAddPlayer.gd<>res://Script/InterfaceController.gd<>res://Script/PopupUpdatePlayer.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://dwh4hm4pnldip<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://dae5e43qvstfs<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://dderlauwjvbk7<>uid://bsowx5etl2bg<>uid://yhtggnnmbnml<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
 ListPlayerElement.tscn::PackedScene::8719641224520865395::1674642019::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListPlayerElement.gd<>uid://b8v3wi1cuh2pa<>uid://b8lvtu6wyxcis
 ListRoleElement.tscn::PackedScene::7169349782241593064::1674642019::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListRoleElement.gd<>uid://b8v3wi1cuh2pa<>uid://c3g1d2275ia82
-::res://Script/::1674642973
+Night.tscn::PackedScene::2848291362682084058::1674655497::0::1::::<><>::uid://lmtb3c4re8jv<>res://Asset/font/Title.tres
+SceneSwitcher.tscn::PackedScene::3238180542178333174::1674656111::0::1::::<><>::res://Script/SceneSwitcher.gd<>uid://brnl7tg7bbbtn
+::res://Script/::1674656890
 InterfaceController.gd::GDScript::-1::1674642441::0::1::::<>Control<>::
 ListPlayerElement.gd::GDScript::-1::1674641976::0::1::::<>TextureButton<>::
 ListRoleElement.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
-MovePoint.gd::GDScript::-1::1674642441::0::1::::<>Node<>::
+MovePoint.gd::GDScript::-1::1674656244::0::1::::<>Node<>::
 Players.gd::GDScript::-1::1674642549::0::1::::<>Control<>::
 PopupAddPlayer.gd::GDScript::-1::1674639420::0::1::::<>Control<>::
 PopupRoleSelect.gd::GDScript::-1::1674635514::0::1::::<>Control<>::
 PopupUpdatePlayer.gd::GDScript::-1::1674642973::0::1::::<>Control<>::
 Roles.gd::GDScript::-1::1674642526::0::1::::<>Control<>::
+SceneSwitcher.gd::GDScript::-1::1674656890::0::1::::<>Control<>::

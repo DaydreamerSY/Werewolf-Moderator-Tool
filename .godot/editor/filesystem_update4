@@ -1,11 +1,10 @@
-res://Scene/ListPlayerElement.tscn
-res://Scene/ListRoleElement.tscn
 res://Scene/Home.tscn
-res://Script/ListPlayerElement.gd
 res://Script/MovePoint.gd
-res://Script/InterfaceController.gd
-res://Script/Players.gd
+res://Scene/Night.tscn
+res://Scene/BeginNight.gd
+res://Script/SceneSwitcher.gd
+res://Scene/scene_switcher.tscn
+res://Scene/SceneSwitcher.tscn
+res://Script/Night.gd
 res://Script/Roles.gd
-res://Asset/Buttons/button.gd
-res://Script/PopupUpdatePlayer.gd
-res://Custom Resource/ResourceRoles.gd
+res://Script/Players.gd
