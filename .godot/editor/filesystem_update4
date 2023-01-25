@@ -2,3 +2,10 @@ res://Scene/ListPlayerElement.tscn
 res://Scene/ListRoleElement.tscn
 res://Scene/Home.tscn
 res://Script/ListPlayerElement.gd
+res://Script/MovePoint.gd
+res://Script/InterfaceController.gd
+res://Script/Players.gd
+res://Script/Roles.gd
+res://Asset/Buttons/button.gd
+res://Script/PopupUpdatePlayer.gd
+res://Custom Resource/ResourceRoles.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://brnl7tg7bbbtn"]
+[gd_scene load_steps=38 format=3 uid="uid://brnl7tg7bbbtn"]
 
 [ext_resource type="Script" path="res://Script/MovePoint.gd" id="1_885wy"]
 [ext_resource type="FontFile" path="res://Asset/font/Title.tres" id="3"]
@@ -30,7 +30,9 @@
 [ext_resource type="Texture2D" uid="uid://bom30hq1ofrmj" path="res://Asset/Character/Villager/3.png" id="33"]
 [ext_resource type="Texture2D" uid="uid://eu1xy7c1bbwy" path="res://Asset/Buttons/IconLightning.png" id="34"]
 [ext_resource type="Texture2D" uid="uid://b82k3nt2vqhma" path="res://Asset/Character/Villager/0.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://dderlauwjvbk7" path="res://Asset/Buttons/IconArrowLeft.png" id="35_2b5n1"]
 [ext_resource type="Texture2D" uid="uid://bsowx5etl2bg" path="res://Asset/Character/Villager/5.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://yhtggnnmbnml" path="res://Asset/Buttons/IconArrowRight.png" id="36_bueh6"]
 [ext_resource type="Texture2D" uid="uid://bx5lrk6xa64tl" path="res://Asset/Character/Villager/4.png" id="37"]
 [ext_resource type="Texture2D" uid="uid://uwqs6dpd25f2" path="res://Asset/Character/Villager/1.png" id="38"]
 [ext_resource type="Texture2D" uid="uid://cyqbou0uc4wac" path="res://Asset/Buttons/IconDown.png" id="39"]
@@ -52,6 +54,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_885wy")
 
+[node name="Button Controller" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24")
+
 [node name="Menu" type="Node2D" parent="."]
 position = Vector2(540, 960)
 
@@ -70,7 +78,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Action List" type="Control" parent="Menu/Players"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -78,7 +86,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="List" type="Control" parent="Menu/Players/Action List"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -89,15 +97,16 @@ list_element_scence = ExtResource("18")
 player_list = ExtResource("21")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Players/Action List/List"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -461.0
-offset_top = -666.0
+offset_top = -264.0
 offset_right = 461.0
-offset_bottom = 158.0
+offset_bottom = 560.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12")
@@ -105,15 +114,16 @@ texture = ExtResource("12")
 [node name="GridContainer" type="GridContainer" parent="Menu/Players/Action List/List"]
 clip_contents = true
 custom_minimum_size = Vector2i(256, 64)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -243.0
-offset_top = -526.0
+offset_top = -124.0
 offset_right = 277.0
-offset_bottom = -6.0
+offset_bottom = 396.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -123,28 +133,35 @@ theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="labelPlayer" type="Label" parent="Menu/Players/Action List/List"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -108.5
-offset_top = 348.0
+offset_top = 750.0
 offset_right = 108.5
-offset_bottom = 425.0
+offset_bottom = 827.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("3")
 theme_override_font_sizes/font_size = 60
 text = "Players"
 
+[node name="Sprite8" type="Sprite2D" parent="Menu/Players/Action List/List/labelPlayer"]
+position = Vector2(-32.5, 40)
+scale = Vector2(0.289894, 0.289894)
+texture = ExtResource("32")
+
 [node name="btnAddPlayer" type="TextureButton" parent="Menu/Players/Action List/List"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 305.0
-offset_top = 5.0
+offset_top = 407.0
 offset_right = 384.0
-offset_bottom = 84.0
+offset_bottom = 486.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("14")
@@ -152,21 +169,22 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Navigator" type="Control" parent="Menu/Players/Action List/List"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -19.0
+offset_top = 383.0
 offset_right = 144.0
-offset_bottom = 109.0
+offset_bottom = 511.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("6")
 
 [node name="Prev" type="TextureButton" parent="Menu/Players/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -184,6 +202,7 @@ stretch_mode = 0
 script = ExtResource("24")
 
 [node name="Next" type="TextureButton" parent="Menu/Players/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -201,6 +220,7 @@ stretch_mode = 0
 script = ExtResource("24")
 
 [node name="Label" type="Label" parent="Menu/Players/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -214,12 +234,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("3")
 theme_override_font_sizes/font_size = 57
-text = "0"
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Popup" type="Control" parent="Menu/Players"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -230,20 +250,19 @@ grow_vertical = 2
 
 [node name="PopupAddPlayer" type="Control" parent="Menu/Players/Popup"]
 visible = false
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -1.0
-offset_top = 2.0
-offset_right = -1.0
-offset_bottom = 2.0
+offset_top = 400.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("5")
 player_list = ExtResource("21")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -259,6 +278,7 @@ texture = ExtResource("12")
 ignore_texture_size = true
 
 [node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -276,6 +296,7 @@ placeholder_text = "Player"
 alignment = 1
 
 [node name="Title" type="Label" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -294,6 +315,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnAddPlayerExit" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -310,6 +332,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="btnOK" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -326,6 +349,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="text" type="Label" parent="Menu/Players/Popup/PopupAddPlayer/btnOK"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -344,6 +368,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnCancel" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -360,6 +385,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="text" type="Label" parent="Menu/Players/Popup/PopupAddPlayer/btnCancel"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -380,16 +406,19 @@ vertical_alignment = 1
 
 [node name="PopupUpdatePlayer" type="Control" parent="Menu/Players/Popup"]
 visible = false
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 400.0
+offset_bottom = 400.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8")
 player_list = ExtResource("21")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -405,6 +434,7 @@ texture = ExtResource("12")
 ignore_texture_size = true
 
 [node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -421,6 +451,7 @@ theme_override_font_sizes/font_size = 45
 alignment = 1
 
 [node name="Title" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -437,6 +468,7 @@ theme_override_font_sizes/font_size = 50
 text = "EDIT"
 
 [node name="btnUpdatePlayerExit" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -453,6 +485,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="btnRename" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -469,6 +502,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="text" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer/btnRename"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -487,6 +521,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnDelete" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -503,6 +538,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="text" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer/btnDelete"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -535,7 +571,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Action List" type="Control" parent="Menu/Roles"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -543,7 +579,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="List" type="Control" parent="Menu/Roles/Action List"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -554,15 +590,16 @@ list_role_element_scence = ExtResource("26")
 roles_list = ExtResource("25")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Roles/Action List/List"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -461.0
-offset_top = -666.0
+offset_top = -264.0
 offset_right = 461.0
-offset_bottom = 158.0
+offset_bottom = 560.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12")
@@ -570,15 +607,16 @@ texture = ExtResource("12")
 [node name="GridContainer" type="GridContainer" parent="Menu/Roles/Action List/List"]
 clip_contents = true
 custom_minimum_size = Vector2i(256, 64)
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -260.0
-offset_top = -526.0
+offset_top = -124.0
 offset_right = 260.0
-offset_bottom = -6.0
+offset_bottom = 396.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 6
@@ -588,15 +626,16 @@ theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="labelRoles" type="Label" parent="Menu/Roles/Action List/List"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -98.5
-offset_top = -612.0
+offset_top = -210.0
 offset_right = 98.5
-offset_bottom = -537.0
+offset_bottom = -135.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("13_gtair")
@@ -605,22 +644,27 @@ text = "Roles"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Sprite9" type="Sprite2D" parent="Menu/Roles/Action List/List/labelRoles"]
+position = Vector2(-9.5, 40)
+scale = Vector2(0.29, 0.29)
+texture = ExtResource("34")
+
 [node name="Navigator" type="Control" parent="Menu/Roles/Action List/List"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -144.0
-offset_top = -19.0
+offset_top = 383.0
 offset_right = 144.0
-offset_bottom = 109.0
+offset_bottom = 511.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("6")
 
 [node name="Prev" type="TextureButton" parent="Menu/Roles/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -638,6 +682,7 @@ stretch_mode = 0
 script = ExtResource("24")
 
 [node name="Next" type="TextureButton" parent="Menu/Roles/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -655,6 +700,7 @@ stretch_mode = 0
 script = ExtResource("24")
 
 [node name="Label" type="Label" parent="Menu/Roles/Action List/List/Navigator"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -668,7 +714,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("13_gtair")
 theme_override_font_sizes/font_size = 57
-text = "0"
+text = "1"
 
 [node name="Play" type="Control" parent="Menu"]
 layout_mode = 3
@@ -685,50 +731,44 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Begin Night" type="TextureButton" parent="Menu/Play"]
+layout_mode = 0
 offset_left = 312.0
-offset_top = 456.0
+offset_top = 858.0
 offset_right = 539.0
-offset_bottom = 682.0
+offset_bottom = 1084.0
 scale = Vector2(2, 2)
 texture_normal = ExtResource("28")
-
-[node name="Button Controller" type="TextureButton" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("24")
-
-[node name="Tween Cheat Sheet (Remove in released)" type="Node2D" parent="."]
 
 [node name="Step" type="Node2D" parent="."]
 position = Vector2(540, 960)
 
 [node name="Sprite2D" type="Sprite2D" parent="Step"]
-position = Vector2(-318.191, 480)
+position = Vector2(-318.191, -380)
 scale = Vector2(0.922046, 0.941176)
 texture = ExtResource("27")
 
 [node name="Sprite2" type="Sprite2D" parent="Step"]
-position = Vector2(-172, 480)
+position = Vector2(-172, -380)
 scale = Vector2(0.922046, 0.941176)
 texture = ExtResource("27")
 
 [node name="Sprite3" type="Sprite2D" parent="Step"]
-position = Vector2(151.191, 480)
+position = Vector2(151.191, -380)
 scale = Vector2(0.922046, 0.941176)
 texture = ExtResource("27")
 
 [node name="Sprite4" type="Sprite2D" parent="Step"]
-position = Vector2(224, 480)
+position = Vector2(224, -380)
 scale = Vector2(0.922046, 0.941176)
 texture = ExtResource("27")
 
 [node name="Sprite5" type="Sprite2D" parent="Step"]
-position = Vector2(403, 478)
+position = Vector2(403, -382)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("28")
 
 [node name="Man" type="Node2D" parent="Step"]
-position = Vector2(-400, 400)
+position = Vector2(-400, -460)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Step/Man"]
 position = Vector2(0, -96)
@@ -744,16 +784,17 @@ scale = Vector2(0.298742, 0.298742)
 texture = ExtResource("39")
 
 [node name="Sprite6" type="Sprite2D" parent="Step"]
-position = Vector2(-399, 479)
+position = Vector2(-399, -381)
 scale = Vector2(0.462766, 0.462766)
 texture = ExtResource("32")
 
 [node name="Sprite7" type="Sprite2D" parent="Step"]
-position = Vector2(-9, 480)
+position = Vector2(-9, -380)
 scale = Vector2(0.553691, 0.553691)
 texture = ExtResource("34")
 
 [node name="Credit" type="Label" parent="."]
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -766,16 +807,17 @@ text = "Asset by: Penzilla
 https://penzilla.itch.io/handdrawn-vector-icon-pack"
 
 [node name="Title" type="Control" parent="."]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -540.0
 offset_right = 540.0
-offset_bottom = 205.0
+offset_bottom = 320.0
 grow_horizontal = 2
 
 [node name="TextureRect" type="TextureRect" parent="Title"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -791,6 +833,7 @@ texture = ExtResource("13")
 ignore_texture_size = true
 
 [node name="Label" type="Label" parent="Title"]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -807,6 +850,43 @@ theme_override_font_sizes/font_size = 65
 text = "SET UP"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Tutorial" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2d" type="Sprite2D" parent="Tutorial"]
+position = Vector2(-277, 640)
+scale = Vector2(0.506565, 0.290806)
+texture = ExtResource("35_2b5n1")
+
+[node name="Sprite2d2" type="Sprite2D" parent="Tutorial"]
+position = Vector2(287, 640)
+scale = Vector2(0.506565, 0.290806)
+texture = ExtResource("36_bueh6")
+
+[node name="Label" type="Label" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -173.0
+offset_top = 599.0
+offset_right = 173.0
+offset_bottom = 674.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 60
+text = "Swipe to go"
 
 [connection signal="item_pressed" from="Menu/Players/Action List/List" to="Menu/Players/Action List/List/Navigator" method="_on_List_item_pressed"]
 [connection signal="item_pressed" from="Menu/Players/Action List/List" to="Menu/Players/Popup/PopupUpdatePlayer" method="_on_List_item_pressed"]

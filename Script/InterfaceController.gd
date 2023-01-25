@@ -30,7 +30,7 @@ func _on_btnCancel_pressed():
 #	btnAddPlayer.disabled = false
 
 
-func _on_Popup_Add_Player_isOpen(state):
+func _on_Popup_Add_Player_isOpen():
 	popupAddPlayer.visible = false
 
 
@@ -39,7 +39,7 @@ func _on_List_item_pressed(id):
 	emit_signal("item_id", id)
 
 
-func _on_Popup_Update_Player_isOpen(state):
+func _on_Popup_Update_Player_isOpen():
 	popupUpdatePlayer.visible = false
 
 

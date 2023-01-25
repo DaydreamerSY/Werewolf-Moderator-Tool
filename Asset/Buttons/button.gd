@@ -34,3 +34,19 @@ func _on_Next_button_up():
 
 func _on_btnAddPlayerExit_button_down():
 	self_modulate = Color.GRAY
+
+
+func _on_btn_add_player_button_down():
+	self_modulate = Color.GRAY
+
+
+func _on_btn_add_player_button_up():
+	self_modulate = default_color
+
+
+func _on_btn_ok_button_down():
+	self_modulate = Color.GRAY
+
+
+func _on_btn_ok_button_up():
+	self_modulate = default_color

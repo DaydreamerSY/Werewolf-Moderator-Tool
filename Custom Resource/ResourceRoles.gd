@@ -6,8 +6,8 @@ signal list_changed(list, )
 @export var roles_list : Dictionary = {"list": []}
 
 var roles_list_default : Dictionary = {"list": [
-	{"name":"Villager","selected": false},
-	{"name":"Werewolf","selected": false},
+	{"name":"Villager","selected": true},
+	{"name":"Werewolf","selected": true},
 	{"name":"Bodyguard","selected": false},
 	{"name":"Seer","selected": false},
 	{"name":"Tanner","selected": false},

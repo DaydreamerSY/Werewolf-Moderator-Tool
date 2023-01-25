@@ -2,7 +2,7 @@ extends Control
 
 @export var player_list : Resource
 
-signal isOpen(state,)
+signal isOpen
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -34,11 +34,11 @@ func _on_List_item_pressed(id):
 func _on_btn_delete_pressed():
 	player_list._delete_player(player_id)
 	print("Delete button is pressed with id: " + str(player_id))
-	emit_signal("isOpen", false)
+	emit_signal("isOpen")
 	get_node("LineEdit").clear()
 
 
 func _on_btn_rename_pressed():
 	player_list._set_name(player_id, get_node("LineEdit").get_text())
-	emit_signal("isOpen", false)
+	emit_signal("isOpen")
 	get_node("LineEdit").clear()

@@ -56,7 +56,6 @@ func move_left():
 	if current_screen > screen_amount_min:
 		is_moving = true
 		var TW = create_tween().set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-		TW.connect("tween_all_completed",Callable(self,"_set_false_is_moving"))
 		TW.tween_property(menu, "position:x", 
 			menu.position.x + 1080.0, move_speed)
 		TW.parallel().tween_property(man, "position:x",
@@ -65,11 +64,9 @@ func move_left():
 		current_screen -= 1
 
 func move_right():
-	var a = self
 	if current_screen < screen_amount_max:
 		is_moving = true
 		var TW = create_tween().set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-		TW.connect("tween_all_completed",Callable(a,"_set_false_is_moving"))
 		TW.tween_property(menu, "position:x", 
 			menu.position.x - 1080.0, move_speed)
 		TW.parallel().tween_property(man, "position:x",
