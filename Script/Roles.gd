@@ -1,8 +1,8 @@
 extends Control
 
 
-export (PackedScene) var list_role_element_scence
-export (Resource) var roles_list
+@export var list_role_element_scence : PackedScene
+@export var roles_list : Resource
 
 signal item_pressed(id, )
 
@@ -27,15 +27,15 @@ func _ready():
 	is_open_1st = false
 	
 	# connect catch signal when change player list to func on_change
-	roles_list.connect("list_changed", self, "_on_list_change")
+	roles_list.connect("list_changed",Callable(self,"_on_list_change"))
 	pass
 
 
 func _create_item_on_list(name, is_trigger):
-	var btnRoleN = list_role_element_scence.instance()
+	var btnRoleN = list_role_element_scence.instantiate()
 #	btnRoleN.set_position(Vector2(posx, posy))
 	btnRoleN.get_node("Role").text = name
-	btnRoleN.connect("pressed", self, "_on_list_element_pressed", [btnRoleN])
+	btnRoleN.connect("pressed",Callable(self,"_on_list_element_pressed").bind(btnRoleN))
 	grid_container.add_child(btnRoleN) 
 	if is_trigger:
 		btnRoleN._trigger_select()
@@ -66,7 +66,7 @@ func _load_list():
 	print("End page: " + str(end_page))
 		
 	for i in range(start_page, end_page):
-		var btnRoleN = list_role_element_scence.instance()
+		var btnRoleN = list_role_element_scence.instantiate()
 		_create_item_on_list(list[i]["name"], list[i]["selected"])
 
 
@@ -94,13 +94,13 @@ func _on_list_change(new_list):
 		end_page = size
 
 	for i in range(start_page, end_page):
-		var btnRoleN = list_role_element_scence.instance()
+		var btnRoleN = list_role_element_scence.instantiate()
 		_create_item_on_list(new_list[i]["name"], new_list[i]["selected"])
 
 
 func _on_list_element_pressed(btnRoleN):
 	print("Role: " + btnRoleN.get_node("Role").text)
-	print("Selected: " + str(btnRoleN.get_node("Sprite").visible))
+	print("Selected: " + str(btnRoleN.get_node("Sprite2D").visible))
 	print("")
 	btnRoleN._trigger_select()
 	roles_list._trigger_select(btnRoleN.get_node("Role").text)

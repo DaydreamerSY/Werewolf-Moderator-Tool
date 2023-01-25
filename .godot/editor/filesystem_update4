@@ -1,0 +1,7 @@
+res://Scene/Home.tscn
+res://Scene/ListPlayerElement.tscn
+res://Scene/ListRoleElement.tscn
+res://script/Move Point.gd
+res://Script/InterfaceController.gd
+res://Script/Popup Add Player.gd
+res://Script/Popup Update Player.gd

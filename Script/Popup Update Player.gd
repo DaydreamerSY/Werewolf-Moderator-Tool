@@ -1,6 +1,6 @@
 extends Control
 
-export (Resource) var player_list
+@export var player_list : Resource
 
 signal isOpen(state,)
 # Declare member variables here. Examples:
@@ -16,19 +16,6 @@ func _ready():
 
 
 
-func _on_btnDelete_pressed():
-	player_list._delete_player(player_id)
-	print("Delete button is pressed with id: " + str(player_id))
-	emit_signal("isOpen", false)
-	get_node("LineEdit").clear()
-
-
-func _on_btnUpdate_pressed():
-	player_list._set_name(player_id, get_node("LineEdit").get_text())
-	emit_signal("isOpen", false)
-	get_node("LineEdit").clear()
-
-
 func _on_Interface_item_id(id):
 	player_id = id
 	if player_list._get_name_from_id(player_id) == null:
@@ -42,3 +29,16 @@ func _on_List_item_pressed(id):
 	if player_list._get_name_from_id(player_id) == null:
 		return
 	get_node("LineEdit").text = player_list._get_name_from_id(player_id)
+
+
+func _on_btn_delete_pressed():
+	player_list._delete_player(player_id)
+	print("Delete button is pressed with id: " + str(player_id))
+	emit_signal("isOpen", false)
+	get_node("LineEdit").clear()
+
+
+func _on_btn_rename_pressed():
+	player_list._set_name(player_id, get_node("LineEdit").get_text())
+	emit_signal("isOpen", false)
+	get_node("LineEdit").clear()

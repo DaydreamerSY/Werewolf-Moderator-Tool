@@ -6,26 +6,20 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
-_global_script_classes=[ {
-"base": "Node",
-"class": "AtlasScene",
-"language": "GDScript",
-"path": "res://addons/sprite_cutter/AtlasScene.gd"
+_global_script_classes=[{
+"base": "Resource",
+"class": &"ResourcePlayers",
+"language": &"GDScript",
+"path": "res://Custom Resource/ResourcePlayer.gd"
 }, {
 "base": "Resource",
-"class": "ResourcePlayers",
-"language": "GDScript",
-"path": "res://Custom Resource/Resource Player.gd"
-}, {
-"base": "Resource",
-"class": "ResourceRoles",
-"language": "GDScript",
-"path": "res://Custom Resource/Resource Roles.gd"
-} ]
+"class": &"ResourceRoles",
+"language": &"GDScript",
+"path": "res://Custom Resource/ResourceRoles.gd"
+}]
 _global_script_class_icons={
-"AtlasScene": "",
 "ResourcePlayers": "",
 "ResourceRoles": ""
 }
@@ -34,22 +28,29 @@ _global_script_class_icons={
 
 config/name="Werewolf Moderator Tool"
 run/main_scene="res://Scene/Home.tscn"
+config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
 [display]
 
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/handheld/orientation=6
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
 window/size/width=1080
 window/size/height=1920
 window/size/test_width=576
 window/size/test_height=1024
-window/handheld/orientation="sensor"
-window/stretch/mode="2d"
-window/stretch/aspect="expand"
 window/dpi/allow_hidpi.Android=false
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/sprite_cutter/plugin.cfg" )
+enabled=PackedStringArray()
+
+[gui]
+
+fonts/stretch/mode="canvas_items"
 
 [input_devices]
 

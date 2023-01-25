@@ -1,7 +1,7 @@
 extends Control
 
-export (PackedScene) var list_element_scence
-export (Resource) var player_list
+@export var list_element_scence : PackedScene
+@export var player_list : Resource
 
 signal item_pressed(id, )
 
@@ -27,16 +27,16 @@ func _ready():
 	is_open_1st = false
 	
 	# connect catch signal when change player list to func on_change
-	player_list.connect("list_changed", self, "_on_list_change")
+	player_list.connect("list_changed",Callable(self,"_on_list_change"))
 	pass 
 	
 	
 func _create_item_on_list(name, id):
-	var btnPlayerN = list_element_scence.instance()
+	var btnPlayerN = list_element_scence.instantiate()
 #	btnPlayerN.set_position(Vector2(posx, posy))
 	btnPlayerN.get_node("Name").text = name
 	btnPlayerN.get_node("Id").text = str(id)
-	btnPlayerN.connect("pressed", self, "_on_list_element_pressed", [btnPlayerN])
+	btnPlayerN.connect("pressed",Callable(self,"_on_list_element_pressed").bind(btnPlayerN))
 	grid_container.add_child(btnPlayerN)
 
 
@@ -65,7 +65,7 @@ func _load_list():
 	print("End page: " + str(end_page))
 		
 	for i in range(start_page, end_page):
-		var btnPlayerN = list_element_scence.instance()
+		var btnPlayerN = list_element_scence.instantiate()
 		_create_item_on_list(list[i]["name"], list[i]["id"])
 
 
@@ -94,7 +94,7 @@ func _on_list_change(new_list):
 		end_page = size
 
 	for i in range(start_page, end_page):
-		var btnPlayerN = list_element_scence.instance()
+		var btnPlayerN = list_element_scence.instantiate()
 		_create_item_on_list(new_list[i]["name"], new_list[i]["id"])
 
 

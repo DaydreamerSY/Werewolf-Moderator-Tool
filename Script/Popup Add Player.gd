@@ -1,6 +1,6 @@
 extends Control
 
-export (Resource) var player_list
+@export var player_list : Resource
 
 signal isOpen(state,)
 # Declare member variables here. Examples:
@@ -14,13 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_btnOk_pressed():
-	
+func _on_btn_ok_pressed():
 	player_name = get_node("LineEdit").get_text()
 	player_list._add_player(player_name)
 	self.visible = false

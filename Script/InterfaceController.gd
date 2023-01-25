@@ -12,8 +12,8 @@ var btnBegin
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	# pop up and more
-	popupAddPlayer = $"../../../Popup/Popup Add Player"
-	popupUpdatePlayer = $"../../../Popup/Popup Update Player"
+	popupAddPlayer = $"../../../Popup/PopupAddPlayer"
+	popupUpdatePlayer = $"../../../Popup/PopupUpdatePlayer"
 	
 	# interface button
 	btnAddPlayer = $"../btnAddPlayer"
@@ -53,3 +53,11 @@ func _on_btnUpdatePlayerExit_pressed():
 
 
 
+
+func _on_btn_cancel_pressed():
+	popupAddPlayer.visible = false
+
+
+func _on_btn_add_player_pressed():
+	popupAddPlayer.visible = true
+	pass # Replace with function body.

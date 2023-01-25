@@ -9,7 +9,7 @@ func _ready():
 
 
 func _on_button_button_down():
-	self_modulate = Color.gray
+	self_modulate = Color.GRAY
 
 
 func _on_button_button_up():
@@ -17,7 +17,7 @@ func _on_button_button_up():
 
 
 func _on_Prev_button_down():
-	self_modulate = Color.gray
+	self_modulate = Color.GRAY
 
 
 func _on_Prev_button_up():
@@ -25,7 +25,7 @@ func _on_Prev_button_up():
 
 
 func _on_Next_button_down():
-	self_modulate = Color.gray
+	self_modulate = Color.GRAY
 
 
 func _on_Next_button_up():
@@ -33,4 +33,4 @@ func _on_Next_button_up():
 
 
 func _on_btnAddPlayerExit_button_down():
-	self_modulate = Color.gray
+	self_modulate = Color.GRAY

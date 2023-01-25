@@ -1,647 +1,826 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=36 format=3 uid="uid://c5fkmdnk6ya8h"]
 
-[ext_resource path="res://Asset/font/MilkyNice.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Asset/font/Players.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Asset/font/Title.tres" type="DynamicFont" id=3]
-[ext_resource path="res://Asset/font/Popup Title.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Script/Popup Add Player.gd" type="Script" id=5]
-[ext_resource path="res://Script/InterfaceController.gd" type="Script" id=6]
-[ext_resource path="res://Script/Popup Role Select.gd" type="Script" id=7]
-[ext_resource path="res://Script/Popup Update Player.gd" type="Script" id=8]
-[ext_resource path="res://Asset/Buttons/Icon_Left.png" type="Texture" id=9]
-[ext_resource path="res://Asset/Buttons/btnDanger.png" type="Texture" id=10]
-[ext_resource path="res://Asset/Buttons/btnOk.png" type="Texture" id=11]
-[ext_resource path="res://Asset/Buttons/Item3.png" type="Texture" id=12]
-[ext_resource path="res://Asset/Label/Item4.png" type="Texture" id=13]
-[ext_resource path="res://Asset/Buttons/Icon_Add.png" type="Texture" id=14]
-[ext_resource path="res://Asset/Buttons/Icon_X.png" type="Texture" id=15]
-[ext_resource path="res://Asset/Buttons/Icon_Right.png" type="Texture" id=16]
-[ext_resource path="res://Scene/button.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Scene/list_player_element.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Script/Roles.gd" type="Script" id=19]
-[ext_resource path="res://Script/Players.gd" type="Script" id=20]
-[ext_resource path="res://Custom Resource/Resource Player.tres" type="Resource" id=21]
-[ext_resource path="res://script/Move Point.gd" type="Script" id=23]
-[ext_resource path="res://Asset/Buttons/button.gd" type="Script" id=24]
-[ext_resource path="res://Custom Resource/Resource Role.tres" type="Resource" id=25]
-[ext_resource path="res://Scene/list_role_element.tscn" type="PackedScene" id=26]
-[ext_resource path="res://Asset/Buttons/Icon_DotsHorizontal.png" type="Texture" id=27]
-[ext_resource path="res://Asset/Buttons/Icon_Tube.png" type="Texture" id=28]
-[ext_resource path="res://Asset/Character/Villager/6.png" type="Texture" id=29]
-[ext_resource path="res://Asset/Character/Villager/7.png" type="Texture" id=30]
-[ext_resource path="res://Asset/Character/Villager/2.png" type="Texture" id=31]
-[ext_resource path="res://Asset/Buttons/Icon_Ghost.png" type="Texture" id=32]
-[ext_resource path="res://Asset/Character/Villager/3.png" type="Texture" id=33]
-[ext_resource path="res://Asset/Buttons/Icon_Lightning.png" type="Texture" id=34]
-[ext_resource path="res://Asset/Character/Villager/0.png" type="Texture" id=35]
-[ext_resource path="res://Asset/Character/Villager/5.png" type="Texture" id=36]
-[ext_resource path="res://Asset/Character/Villager/4.png" type="Texture" id=37]
-[ext_resource path="res://Asset/Character/Villager/1.png" type="Texture" id=38]
-[ext_resource path="res://Asset/Buttons/Icon_Down.png" type="Texture" id=39]
+[ext_resource type="FontFile" path="res://Asset/font/Title.tres" id="3"]
+[ext_resource type="Script" path="res://Script/Popup Add Player.gd" id="5"]
+[ext_resource type="Script" path="res://Script/InterfaceController.gd" id="6"]
+[ext_resource type="Script" path="res://Script/Popup Update Player.gd" id="8"]
+[ext_resource type="Texture2D" uid="uid://25blc46js2f0" path="res://Asset/Buttons/IconLeft.png" id="9"]
+[ext_resource type="Texture2D" uid="uid://cfnus2sxtykm7" path="res://Asset/Buttons/btnDanger.png" id="10"]
+[ext_resource type="Texture2D" uid="uid://bjfhlmp5l8vcv" path="res://Asset/Buttons/btnOk.png" id="11"]
+[ext_resource type="Texture2D" uid="uid://dygh8ikk7pt5r" path="res://Asset/Buttons/Item3.png" id="12"]
+[ext_resource type="Texture2D" uid="uid://lmtb3c4re8jv" path="res://Asset/Label/Item4.png" id="13"]
+[ext_resource type="FontFile" uid="uid://b8v3wi1cuh2pa" path="res://Asset/font/MilkyNice.ttf" id="13_gtair"]
+[ext_resource type="Texture2D" uid="uid://c1exsv1le6if4" path="res://Asset/Buttons/IconAdd.png" id="14"]
+[ext_resource type="Texture2D" uid="uid://dpfftg16kumn4" path="res://Asset/Buttons/IconX.png" id="15"]
+[ext_resource type="Texture2D" uid="uid://3hx667r4drl6" path="res://Asset/Buttons/IconRight.png" id="16"]
+[ext_resource type="PackedScene" uid="uid://crt0n83opwlcl" path="res://Scene/ListPlayerElement.tscn" id="18"]
+[ext_resource type="Script" path="res://Script/Roles.gd" id="19"]
+[ext_resource type="Script" path="res://Script/Players.gd" id="20"]
+[ext_resource type="Resource" path="res://Custom Resource/ResourcePlayer.tres" id="21"]
+[ext_resource type="Script" path="res://script/Move Point.gd" id="23"]
+[ext_resource type="Script" path="res://Asset/Buttons/button.gd" id="24"]
+[ext_resource type="Resource" path="res://Custom Resource/ResourceRole.tres" id="25"]
+[ext_resource type="PackedScene" uid="uid://clh8ttqkm6dok" path="res://Scene/ListRoleElement.tscn" id="26"]
+[ext_resource type="Texture2D" uid="uid://qkqqt361lxmv" path="res://Asset/Buttons/IconDotsHorizontal.png" id="27"]
+[ext_resource type="Texture2D" uid="uid://fchds0tojmwx" path="res://Asset/Buttons/IconTube.png" id="28"]
+[ext_resource type="Texture2D" uid="uid://dagewp2cj8ls0" path="res://Asset/Character/Villager/6.png" id="29"]
+[ext_resource type="Texture2D" uid="uid://djmidgce1gb7r" path="res://Asset/Character/Villager/7.png" id="30"]
+[ext_resource type="Texture2D" uid="uid://c4p1dx5vpswfo" path="res://Asset/Character/Villager/2.png" id="31"]
+[ext_resource type="Texture2D" uid="uid://dockm6qah8bwl" path="res://Asset/Buttons/IconGhost.png" id="32"]
+[ext_resource type="Texture2D" uid="uid://bom30hq1ofrmj" path="res://Asset/Character/Villager/3.png" id="33"]
+[ext_resource type="Texture2D" uid="uid://eu1xy7c1bbwy" path="res://Asset/Buttons/IconLightning.png" id="34"]
+[ext_resource type="Texture2D" uid="uid://b82k3nt2vqhma" path="res://Asset/Character/Villager/0.png" id="35"]
+[ext_resource type="Texture2D" uid="uid://bsowx5etl2bg" path="res://Asset/Character/Villager/5.png" id="36"]
+[ext_resource type="Texture2D" uid="uid://bx5lrk6xa64tl" path="res://Asset/Character/Villager/4.png" id="37"]
+[ext_resource type="Texture2D" uid="uid://uwqs6dpd25f2" path="res://Asset/Character/Villager/1.png" id="38"]
+[ext_resource type="Texture2D" uid="uid://cyqbou0uc4wac" path="res://Asset/Buttons/IconDown.png" id="39"]
 
-[sub_resource type="DynamicFont" id=2]
-size = 55
-font_data = ExtResource( 1 )
-
-[sub_resource type="SpriteFrames" id=3]
-animations = [ {
-"frames": [ ExtResource( 35 ), ExtResource( 38 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 29 ), ExtResource( 30 ) ],
+[sub_resource type="SpriteFrames" id="3"]
+animations = [{
+"frames": [ExtResource("35"), ExtResource("38"), ExtResource("31"), ExtResource("33"), ExtResource("37"), ExtResource("36"), ExtResource("29"), ExtResource("30")],
 "loop": true,
-"name": "run",
+"name": &"run",
 "speed": 5.0
-} ]
-
-[sub_resource type="DynamicFont" id=1]
-size = 30
-font_data = ExtResource( 1 )
+}]
 
 [node name="Home" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 23 )
-
-[node name="Title" type="Control" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -20.0
-margin_right = 1060.0
-margin_bottom = 192.0
-
-[node name="TextureRect" type="TextureRect" parent="Title"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -276.0
-margin_top = 32.0
-margin_right = 289.0
-margin_bottom = 240.0
-texture = ExtResource( 13 )
-expand = true
-
-[node name="Label" type="Label" parent="Title"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -188.0
-margin_right = 188.0
-margin_bottom = 192.0
-custom_fonts/font = ExtResource( 3 )
-text = "SET UP"
-align = 1
-valign = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("23")
 
 [node name="Menu" type="Node2D" parent="."]
-position = Vector2( 540, 960 )
+position = Vector2(540, 960)
 
 [node name="Players" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -960.0
-margin_right = 540.0
-margin_bottom = 960.0
+offset_left = -540.0
+offset_top = -960.0
+offset_right = 540.0
+offset_bottom = 960.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Action List" type="Control" parent="Menu/Players"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -512.0
-margin_right = 540.0
-margin_bottom = 512.0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="List" type="Control" parent="Menu/Players/Action List"]
-margin_top = -256.0
-margin_right = 1080.0
-margin_bottom = 768.0
-script = ExtResource( 20 )
-list_element_scence = ExtResource( 18 )
-player_list = ExtResource( 21 )
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("20")
+list_element_scence = ExtResource("18")
+player_list = ExtResource("21")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Players/Action List/List"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -412.0
-margin_top = -412.0
-margin_right = 412.0
-margin_bottom = 412.0
-texture = ExtResource( 12 )
-expand = true
+offset_left = -461.0
+offset_top = -666.0
+offset_right = 461.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12")
 
 [node name="GridContainer" type="GridContainer" parent="Menu/Players/Action List/List"]
+clip_contents = true
+custom_minimum_size = Vector2i(256, 64)
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -304.0
-margin_top = -264.0
-margin_right = 304.0
-margin_bottom = 256.0
+offset_left = -243.0
+offset_top = -526.0
+offset_right = 277.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-custom_constants/vseparation = 25
-custom_constants/hseparation = 100
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="labelPlayer" type="Label" parent="Menu/Players/Action List/List"]
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -98.5
-margin_top = -352.0
-margin_right = 98.5
-margin_bottom = -286.0
-custom_fonts/font = SubResource( 2 )
+offset_left = -108.5
+offset_top = 348.0
+offset_right = 108.5
+offset_bottom = 425.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 60
 text = "Players"
-align = 1
-valign = 1
 
 [node name="btnAddPlayer" type="TextureButton" parent="Menu/Players/Action List/List"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 276.0
-margin_top = 280.0
-margin_right = 356.0
-margin_bottom = 360.0
-texture_normal = ExtResource( 14 )
-expand = true
+offset_left = 305.0
+offset_top = 5.0
+offset_right = 384.0
+offset_bottom = 84.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("14")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Navigator" type="Control" parent="Menu/Players/Action List/List"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -144.0
-margin_top = 256.0
-margin_right = 144.0
-margin_bottom = 384.0
-script = ExtResource( 6 )
+offset_left = -144.0
+offset_top = -19.0
+offset_right = 144.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6")
 
 [node name="Prev" type="TextureButton" parent="Menu/Players/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.0
-margin_top = -32.5
-margin_right = -94.0
-margin_bottom = 32.5
-texture_normal = ExtResource( 9 )
-expand = true
-script = ExtResource( 24 )
+offset_left = -140.0
+offset_top = -32.5
+offset_right = -94.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24")
 
 [node name="Next" type="TextureButton" parent="Menu/Players/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 92.0
-margin_top = -32.5
-margin_right = 138.0
-margin_bottom = 32.5
-texture_normal = ExtResource( 16 )
-expand = true
-script = ExtResource( 24 )
+offset_left = 92.0
+offset_top = -32.5
+offset_right = 138.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24")
 
 [node name="Label" type="Label" parent="Menu/Players/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -18.0
-margin_right = 20.0
-margin_bottom = 18.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = -20.0
+offset_top = -36.0
+offset_right = 20.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 57
 text = "0"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Popup" type="Control" parent="Menu/Players"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="Popup Add Player" type="Control" parent="Menu/Players/Popup"]
+[node name="PopupAddPlayer" type="Control" parent="Menu/Players/Popup"]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 2.0
+offset_right = -1.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5")
+player_list = ExtResource("21")
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-script = ExtResource( 5 )
-player_list = ExtResource( 21 )
+offset_left = -434.0
+offset_top = -370.0
+offset_right = 436.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12")
+ignore_texture_size = true
 
-[node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/Popup Add Player"]
+[node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -434.0
-margin_top = -370.0
-margin_right = 436.0
-margin_bottom = 104.0
-texture = ExtResource( 12 )
-expand = true
+offset_left = -342.0
+offset_top = -259.0
+offset_right = 343.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 45
+placeholder_text = "Player"
+alignment = 1
 
-[node name="btnCancel" parent="Menu/Players/Popup/Popup Add Player" instance=ExtResource( 17 )]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = -333.0
-margin_top = -37.0
-margin_right = -98.0
-margin_bottom = 37.0
-texture_normal = ExtResource( 10 )
-
-[node name="Label" parent="Menu/Players/Popup/Popup Add Player/btnCancel" index="0"]
-text = "Cancel"
-valign = 1
-
-[node name="btnOk" parent="Menu/Players/Popup/Popup Add Player" instance=ExtResource( 17 )]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 108.0
-margin_top = -37.0
-margin_right = 343.0
-margin_bottom = 37.0
-texture_normal = ExtResource( 11 )
-
-[node name="Label" parent="Menu/Players/Popup/Popup Add Player/btnOk" index="0"]
-text = "Add"
-valign = 1
-
-[node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/Popup Add Player"]
+[node name="Title" type="Label" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -342.0
-margin_top = -259.0
-margin_right = 343.0
-margin_bottom = -168.0
-custom_fonts/font = ExtResource( 2 )
-align = 1
-
-[node name="Title" type="Label" parent="Menu/Players/Popup/Popup Add Player"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -147.5
-margin_top = -332.0
-margin_right = 147.5
-margin_bottom = -264.0
-custom_fonts/font = ExtResource( 4 )
+offset_left = -147.5
+offset_top = -334.0
+offset_right = 147.5
+offset_bottom = -266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
 text = "Add Player"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="btnAddPlayerExit" type="TextureButton" parent="Menu/Players/Popup/Popup Add Player"]
-margin_left = 384.0
-margin_top = -364.0
-margin_right = 464.0
-margin_bottom = -284.0
-texture_normal = ExtResource( 15 )
-expand = true
+[node name="btnAddPlayerExit" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 368.0
+offset_top = -386.0
+offset_right = 448.0
+offset_bottom = -306.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Popup Update Player" type="Control" parent="Menu/Players/Popup"]
+[node name="btnOK" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = -20.0
+offset_right = 347.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="Menu/Players/Popup/PopupAddPlayer/btnOK"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -31.5
+offset_right = 48.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
+text = "Add"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnCancel" type="TextureButton" parent="Menu/Players/Popup/PopupAddPlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -20.0
+offset_right = -90.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="Menu/Players/Popup/PopupAddPlayer/btnCancel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -31.5
+offset_right = 48.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
+text = "Cancel
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopupUpdatePlayer" type="Control" parent="Menu/Players/Popup"]
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8")
+player_list = ExtResource("21")
+
+[node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -20.0
-margin_right = 20.0
-margin_bottom = 20.0
-script = ExtResource( 8 )
-player_list = ExtResource( 21 )
+offset_left = -434.0
+offset_top = -370.0
+offset_right = 436.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12")
+ignore_texture_size = true
 
-[node name="TextureRect" type="TextureRect" parent="Menu/Players/Popup/Popup Update Player"]
+[node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -434.0
-margin_top = -370.0
-margin_right = 436.0
-margin_bottom = 104.0
-texture = ExtResource( 12 )
-expand = true
+offset_left = -342.0
+offset_top = -259.0
+offset_right = 343.0
+offset_bottom = -168.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 45
+alignment = 1
 
-[node name="btnDelete" parent="Menu/Players/Popup/Popup Update Player" instance=ExtResource( 17 )]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = -333.0
-margin_top = -37.0
-margin_right = -98.0
-margin_bottom = 37.0
-texture_normal = ExtResource( 10 )
-
-[node name="Label" parent="Menu/Players/Popup/Popup Update Player/btnDelete" index="0"]
-text = "Delete"
-valign = 1
-
-[node name="btnUpdate" parent="Menu/Players/Popup/Popup Update Player" instance=ExtResource( 17 )]
-anchor_top = 0.5
-anchor_bottom = 0.5
-margin_left = 108.0
-margin_top = -37.0
-margin_right = 343.0
-margin_bottom = 37.0
-texture_normal = ExtResource( 11 )
-
-[node name="Label" parent="Menu/Players/Popup/Popup Update Player/btnUpdate" index="0"]
-text = "Change Name"
-valign = 1
-
-[node name="LineEdit" type="LineEdit" parent="Menu/Players/Popup/Popup Update Player"]
+[node name="Title" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -342.0
-margin_top = -259.0
-margin_right = 343.0
-margin_bottom = -168.0
-custom_fonts/font = ExtResource( 2 )
-align = 1
-
-[node name="Title" type="Label" parent="Menu/Players/Popup/Popup Update Player"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -60.0
-margin_top = -332.0
-margin_right = 60.0
-margin_bottom = -264.0
-custom_fonts/font = ExtResource( 4 )
+offset_left = -60.0
+offset_top = -334.0
+offset_right = 60.0
+offset_bottom = -266.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
 text = "EDIT"
-align = 1
-valign = 1
 
-[node name="btnUpdatePlayerExit" type="TextureButton" parent="Menu/Players/Popup/Popup Update Player"]
-margin_left = 384.0
-margin_top = -364.0
-margin_right = 464.0
-margin_bottom = -284.0
-texture_normal = ExtResource( 15 )
-expand = true
+[node name="btnUpdatePlayerExit" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+offset_left = 908.0
+offset_top = 574.0
+offset_right = 988.0
+offset_bottom = 654.0
+texture_normal = ExtResource("15")
+ignore_texture_size = true
+stretch_mode = 0
 
-[node name="Popup Role Select" type="Control" parent="Menu/Players/Popup"]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 7 )
+[node name="btnRename" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = -20.0
+offset_right = 347.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("11")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer/btnRename"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -31.5
+offset_right = 48.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
+text = "Rename"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnDelete" type="TextureButton" parent="Menu/Players/Popup/PopupUpdatePlayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -20.0
+offset_right = -90.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="Menu/Players/Popup/PopupUpdatePlayer/btnDelete"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -31.5
+offset_right = 48.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 50
+text = "Delete"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Roles" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 540.0
-margin_top = -960.0
-margin_right = 1620.0
-margin_bottom = 960.0
+offset_left = 540.0
+offset_top = -960.0
+offset_right = 1620.0
+offset_bottom = 960.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Action List" type="Control" parent="Menu/Roles"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -540.0
-margin_top = -512.0
-margin_right = 540.0
-margin_bottom = 512.0
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="List" type="Control" parent="Menu/Roles/Action List"]
-margin_top = -256.0
-margin_right = 1080.0
-margin_bottom = 768.0
-script = ExtResource( 19 )
-list_role_element_scence = ExtResource( 26 )
-roles_list = ExtResource( 25 )
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("19")
+list_role_element_scence = ExtResource("26")
+roles_list = ExtResource("25")
 
 [node name="TextureRect" type="TextureRect" parent="Menu/Roles/Action List/List"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -412.0
-margin_top = -412.0
-margin_right = 412.0
-margin_bottom = 412.0
-texture = ExtResource( 12 )
-expand = true
+offset_left = -461.0
+offset_top = -666.0
+offset_right = 461.0
+offset_bottom = 158.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12")
 
 [node name="GridContainer" type="GridContainer" parent="Menu/Roles/Action List/List"]
+clip_contents = true
+custom_minimum_size = Vector2i(256, 64)
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -304.0
-margin_top = -264.0
-margin_right = 304.0
-margin_bottom = 256.0
+offset_left = -260.0
+offset_top = -526.0
+offset_right = 260.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
-custom_constants/vseparation = 25
-custom_constants/hseparation = 100
+theme_override_constants/h_separation = 100
+theme_override_constants/v_separation = 25
 columns = 2
 
 [node name="labelRoles" type="Label" parent="Menu/Roles/Action List/List"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -98.5
-margin_top = -352.0
-margin_right = 98.5
-margin_bottom = -286.0
-custom_fonts/font = SubResource( 2 )
+offset_left = -98.5
+offset_top = -612.0
+offset_right = 98.5
+offset_bottom = -537.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 60
 text = "Roles"
-align = 1
-valign = 1
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Navigator" type="Control" parent="Menu/Roles/Action List/List"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -144.0
-margin_top = 256.0
-margin_right = 144.0
-margin_bottom = 384.0
-script = ExtResource( 6 )
+offset_left = -144.0
+offset_top = -19.0
+offset_right = 144.0
+offset_bottom = 109.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6")
 
 [node name="Prev" type="TextureButton" parent="Menu/Roles/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -140.0
-margin_top = -32.5
-margin_right = -94.0
-margin_bottom = 32.5
-texture_normal = ExtResource( 9 )
-expand = true
-script = ExtResource( 24 )
+offset_left = -140.0
+offset_top = -32.5
+offset_right = -94.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("9")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24")
 
 [node name="Next" type="TextureButton" parent="Menu/Roles/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 92.0
-margin_top = -32.5
-margin_right = 138.0
-margin_bottom = 32.5
-texture_normal = ExtResource( 16 )
-expand = true
-script = ExtResource( 24 )
+offset_left = 92.0
+offset_top = -32.5
+offset_right = 138.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("16")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("24")
 
 [node name="Label" type="Label" parent="Menu/Roles/Action List/List/Navigator"]
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -18.0
-margin_right = 20.0
-margin_bottom = 18.0
-custom_fonts/font = ExtResource( 2 )
+offset_left = -20.0
+offset_top = -18.0
+offset_right = 20.0
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 57
 text = "0"
-align = 1
-valign = 1
 
 [node name="Play" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = 1620.0
-margin_top = -960.0
-margin_right = 2700.0
-margin_bottom = 960.0
+offset_left = 1620.0
+offset_top = -960.0
+offset_right = 2700.0
+offset_bottom = 960.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Begin Night" type="TextureButton" parent="Menu/Play"]
-margin_left = 312.0
-margin_top = 456.0
-margin_right = 539.0
-margin_bottom = 682.0
-rect_scale = Vector2( 2, 2 )
-texture_normal = ExtResource( 28 )
+offset_left = 312.0
+offset_top = 456.0
+offset_right = 539.0
+offset_bottom = 682.0
+scale = Vector2(2, 2)
+texture_normal = ExtResource("28")
 
 [node name="Button Controller" type="TextureButton" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-script = ExtResource( 24 )
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("24")
 
 [node name="Tween Cheat Sheet (Remove in released)" type="Node2D" parent="."]
 
 [node name="Step" type="Node2D" parent="."]
-position = Vector2( 540, 960 )
+position = Vector2(540, 960)
 
-[node name="Sprite" type="Sprite" parent="Step"]
-position = Vector2( -318.191, 480 )
-scale = Vector2( 0.922046, 0.941176 )
-texture = ExtResource( 27 )
+[node name="Sprite2D" type="Sprite2D" parent="Step"]
+position = Vector2(-318.191, 480)
+scale = Vector2(0.922046, 0.941176)
+texture = ExtResource("27")
 
-[node name="Sprite2" type="Sprite" parent="Step"]
-position = Vector2( -172, 480 )
-scale = Vector2( 0.922046, 0.941176 )
-texture = ExtResource( 27 )
+[node name="Sprite2" type="Sprite2D" parent="Step"]
+position = Vector2(-172, 480)
+scale = Vector2(0.922046, 0.941176)
+texture = ExtResource("27")
 
-[node name="Sprite3" type="Sprite" parent="Step"]
-position = Vector2( 151.191, 480 )
-scale = Vector2( 0.922046, 0.941176 )
-texture = ExtResource( 27 )
+[node name="Sprite3" type="Sprite2D" parent="Step"]
+position = Vector2(151.191, 480)
+scale = Vector2(0.922046, 0.941176)
+texture = ExtResource("27")
 
-[node name="Sprite4" type="Sprite" parent="Step"]
-position = Vector2( 224, 480 )
-scale = Vector2( 0.922046, 0.941176 )
-texture = ExtResource( 27 )
+[node name="Sprite4" type="Sprite2D" parent="Step"]
+position = Vector2(224, 480)
+scale = Vector2(0.922046, 0.941176)
+texture = ExtResource("27")
 
-[node name="Sprite5" type="Sprite" parent="Step"]
-position = Vector2( 403, 478 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 28 )
+[node name="Sprite5" type="Sprite2D" parent="Step"]
+position = Vector2(403, 478)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("28")
 
 [node name="Man" type="Node2D" parent="Step"]
-position = Vector2( -400, 400 )
+position = Vector2(-400, 400)
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="Step/Man"]
-position = Vector2( 0, -96 )
-scale = Vector2( 3, 3 )
-frames = SubResource( 3 )
-animation = "run"
-frame = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Step/Man"]
+position = Vector2(0, -96)
+scale = Vector2(3, 3)
+frames = SubResource("3")
+animation = &"run"
 speed_scale = 2.0
 playing = true
 
-[node name="Sprite" type="Sprite" parent="Step/Man"]
-position = Vector2( 0, -24 )
-scale = Vector2( 0.298742, 0.298742 )
-texture = ExtResource( 39 )
+[node name="Sprite2D" type="Sprite2D" parent="Step/Man"]
+position = Vector2(0, -24)
+scale = Vector2(0.298742, 0.298742)
+texture = ExtResource("39")
 
-[node name="Sprite6" type="Sprite" parent="Step"]
-position = Vector2( -399, 479 )
-scale = Vector2( 0.462766, 0.462766 )
-texture = ExtResource( 32 )
+[node name="Sprite6" type="Sprite2D" parent="Step"]
+position = Vector2(-399, 479)
+scale = Vector2(0.462766, 0.462766)
+texture = ExtResource("32")
 
-[node name="Sprite7" type="Sprite" parent="Step"]
-position = Vector2( -9, 480 )
-scale = Vector2( 0.553691, 0.553691 )
-texture = ExtResource( 34 )
+[node name="Sprite7" type="Sprite2D" parent="Step"]
+position = Vector2(-9, 480)
+scale = Vector2(0.553691, 0.553691)
+texture = ExtResource("34")
 
 [node name="Credit" type="Label" parent="."]
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = 1760.0
-margin_right = 1080.0
-margin_bottom = 1880.0
-custom_fonts/font = SubResource( 1 )
+offset_top = -86.0
+offset_right = 1080.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("13_gtair")
+theme_override_font_sizes/font_size = 31
 text = "Asset by: Penzilla
 https://penzilla.itch.io/handdrawn-vector-icon-pack"
-valign = 2
+
+[node name="Title" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -540.0
+offset_right = 540.0
+offset_bottom = 205.0
+grow_horizontal = 2
+
+[node name="TextureRect" type="TextureRect" parent="Title"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -52.5
+offset_right = 264.0
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13")
+ignore_texture_size = true
+
+[node name="Label" type="Label" parent="Title"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -55.5
+offset_right = 147.0
+offset_bottom = 55.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3")
+theme_override_font_sizes/font_size = 65
+text = "SET UP"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="item_pressed" from="Menu/Players/Action List/List" to="Menu/Players/Action List/List/Navigator" method="_on_List_item_pressed"]
-[connection signal="item_pressed" from="Menu/Players/Action List/List" to="Menu/Players/Popup/Popup Update Player" method="_on_List_item_pressed"]
-[connection signal="button_down" from="Menu/Players/Action List/List/btnAddPlayer" to="Button Controller" method="_on_btnAddPlayer_button_down"]
-[connection signal="button_up" from="Menu/Players/Action List/List/btnAddPlayer" to="Button Controller" method="_on_btnAddPlayer_button_up"]
-[connection signal="pressed" from="Menu/Players/Action List/List/btnAddPlayer" to="Menu/Players/Action List/List/Navigator" method="_on_btnAddPlayer_pressed"]
+[connection signal="item_pressed" from="Menu/Players/Action List/List" to="Menu/Players/Popup/PopupUpdatePlayer" method="_on_List_item_pressed"]
+[connection signal="pressed" from="Menu/Players/Action List/List/btnAddPlayer" to="Menu/Players/Action List/List/Navigator" method="_on_btn_add_player_pressed"]
 [connection signal="button_down" from="Menu/Players/Action List/List/Navigator/Prev" to="Menu/Players/Action List/List/Navigator/Prev" method="_on_Prev_button_down"]
 [connection signal="button_up" from="Menu/Players/Action List/List/Navigator/Prev" to="Menu/Players/Action List/List/Navigator/Prev" method="_on_Prev_button_up"]
 [connection signal="pressed" from="Menu/Players/Action List/List/Navigator/Prev" to="Menu/Players/Action List/List" method="_on_Prev_pressed"]
 [connection signal="button_down" from="Menu/Players/Action List/List/Navigator/Next" to="Menu/Players/Action List/List/Navigator/Next" method="_on_Next_button_down"]
 [connection signal="button_up" from="Menu/Players/Action List/List/Navigator/Next" to="Menu/Players/Action List/List/Navigator/Next" method="_on_Next_button_up"]
 [connection signal="pressed" from="Menu/Players/Action List/List/Navigator/Next" to="Menu/Players/Action List/List" method="_on_Next_pressed"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Add Player/btnCancel" to="Menu/Players/Action List/List/Navigator" method="_on_btnCancel_pressed"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Add Player/btnOk" to="Menu/Players/Popup/Popup Add Player" method="_on_btnOk_pressed"]
-[connection signal="button_down" from="Menu/Players/Popup/Popup Add Player/btnAddPlayerExit" to="Button Controller" method="_on_btnAddPlayerExit_button_down"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Add Player/btnAddPlayerExit" to="Menu/Players/Action List/List/Navigator" method="_on_btnAddPlayerExit_pressed"]
-[connection signal="isOpen" from="Menu/Players/Popup/Popup Update Player" to="Menu/Players/Action List/List/Navigator" method="_on_Popup_Update_Player_isOpen"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Update Player/btnDelete" to="Menu/Players/Popup/Popup Update Player" method="_on_btnDelete_pressed"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Update Player/btnUpdate" to="Menu/Players/Popup/Popup Update Player" method="_on_btnUpdate_pressed"]
-[connection signal="pressed" from="Menu/Players/Popup/Popup Update Player/btnUpdatePlayerExit" to="Menu/Players/Action List/List/Navigator" method="_on_btnUpdatePlayerExit_pressed"]
+[connection signal="button_down" from="Menu/Players/Popup/PopupAddPlayer/btnAddPlayerExit" to="Button Controller" method="_on_btnAddPlayerExit_button_down"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupAddPlayer/btnAddPlayerExit" to="Menu/Players/Action List/List/Navigator" method="_on_btnAddPlayerExit_pressed"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupAddPlayer/btnOK" to="Menu/Players/Popup/PopupAddPlayer" method="_on_btn_ok_pressed"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupAddPlayer/btnCancel" to="Menu/Players/Action List/List/Navigator" method="_on_btn_cancel_pressed"]
+[connection signal="isOpen" from="Menu/Players/Popup/PopupUpdatePlayer" to="Menu/Players/Action List/List/Navigator" method="_on_Popup_Update_Player_isOpen"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupUpdatePlayer/btnUpdatePlayerExit" to="Menu/Players/Action List/List/Navigator" method="_on_btnUpdatePlayerExit_pressed"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupUpdatePlayer/btnRename" to="Menu/Players/Popup/PopupUpdatePlayer" method="_on_btn_rename_pressed"]
+[connection signal="pressed" from="Menu/Players/Popup/PopupUpdatePlayer/btnDelete" to="Menu/Players/Popup/PopupUpdatePlayer" method="_on_btn_delete_pressed"]
 [connection signal="button_down" from="Menu/Roles/Action List/List/Navigator/Prev" to="Menu/Roles/Action List/List/Navigator/Prev" method="_on_Prev_button_down"]
 [connection signal="button_up" from="Menu/Roles/Action List/List/Navigator/Prev" to="Menu/Roles/Action List/List/Navigator/Prev" method="_on_Prev_button_up"]
 [connection signal="pressed" from="Menu/Roles/Action List/List/Navigator/Prev" to="Menu/Roles/Action List/List" method="_on_Prev_pressed"]
 [connection signal="button_down" from="Menu/Roles/Action List/List/Navigator/Next" to="Menu/Roles/Action List/List/Navigator/Next" method="_on_Next_button_down"]
 [connection signal="button_up" from="Menu/Roles/Action List/List/Navigator/Next" to="Menu/Roles/Action List/List/Navigator/Next" method="_on_Next_button_up"]
 [connection signal="pressed" from="Menu/Roles/Action List/List/Navigator/Next" to="Menu/Roles/Action List/List" method="_on_Next_pressed"]
-
-[editable path="Menu/Players/Popup/Popup Add Player/btnCancel"]
-[editable path="Menu/Players/Popup/Popup Add Player/btnOk"]
-[editable path="Menu/Players/Popup/Popup Update Player/btnDelete"]
-[editable path="Menu/Players/Popup/Popup Update Player/btnUpdate"]
