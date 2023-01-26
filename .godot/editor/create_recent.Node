@@ -1,5 +1,10 @@
 TextureButton
-Node2D
+TextureRect
+VBoxContainer
+ScrollContainer
+GridContainer
+VScrollBar
 Label
 Sprite2D
 Control
+Node2D

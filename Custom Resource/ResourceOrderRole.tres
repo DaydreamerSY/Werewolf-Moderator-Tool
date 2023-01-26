@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://drqq170ojokc"]
+
+[ext_resource type="Script" path="res://Custom Resource/ResourceOrderRole.gd" id="1_og7l0"]
+
+[resource]
+script = ExtResource("1_og7l0")
+order = null

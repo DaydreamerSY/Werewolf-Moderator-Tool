@@ -1,10 +1,10 @@
-res://Scene/Home.tscn
-res://Script/MovePoint.gd
 res://Scene/Night.tscn
-res://Scene/BeginNight.gd
-res://Script/SceneSwitcher.gd
-res://Scene/scene_switcher.tscn
-res://Scene/SceneSwitcher.tscn
+res://Scene/RoleOrderList.tscn
+res://Scene/Home.tscn
 res://Script/Night.gd
-res://Script/Roles.gd
+res://Script/SCrollRolesList.gd
+res://Custom Resource/ResourceOrderRole.gd
 res://Script/Players.gd
+res://Custom Resource/ResourceRoles.gd
+res://Scene/SceneSwitcher.tscn
+res://Scene/ListOrderElement.tscn

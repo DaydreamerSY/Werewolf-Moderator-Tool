@@ -22,7 +22,7 @@ func _ready():
 	page_label = navigator.get_node("Label")
 	
 	player_list._load_data()
-	_load_list()
+	_generate_list()
 	
 	is_open_1st = false
 	
@@ -40,7 +40,7 @@ func _create_item_on_list(player_name, id):
 	grid_container.add_child(_btnRoleN)
 
 
-func _load_list():
+func _generate_list():
 	page_label.text = str(page + 1)
 	
 	
@@ -122,7 +122,7 @@ func _on_Prev_pressed():
 		end_page = max_per_page * (page + 1)
 		
 		_delete_children()
-		_load_list()
+		_generate_list()
 
 
 
@@ -140,7 +140,7 @@ func _on_Next_pressed():
 			end_page = _size
 	
 	_delete_children()
-	_load_list()
+	_generate_list()
 
 
 func _on_btnAddPlayer_pressed():

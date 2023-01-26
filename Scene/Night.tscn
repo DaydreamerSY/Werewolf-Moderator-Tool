@@ -1,16 +1,143 @@
-[gd_scene load_steps=5 format=3 uid="uid://bgty7bwcb1vok"]
+[gd_scene load_steps=12 format=3 uid="uid://h20mmchdt4ba"]
 
 [ext_resource type="Script" path="res://Script/Night.gd" id="1_73da7"]
 [ext_resource type="Texture2D" uid="uid://lmtb3c4re8jv" path="res://Asset/Label/Item4.png" id="1_kpyxn"]
 [ext_resource type="FontFile" path="res://Asset/font/Title.tres" id="2_j0udl"]
+[ext_resource type="Texture2D" uid="uid://cmsi4qjtl3r87" path="res://Asset/Buttons/Asset97.png" id="3_p1sb5"]
 [ext_resource type="Texture2D" uid="uid://calypatmriqnx" path="res://Asset/Buttons/IconExit.png" id="3_s0ylg"]
+[ext_resource type="Texture2D" uid="uid://dygh8ikk7pt5r" path="res://Asset/Buttons/Item3.png" id="5_8hy17"]
+[ext_resource type="Resource" uid="uid://drqq170ojokc" path="res://Custom Resource/ResourceOrderRole.tres" id="6_3h8ng"]
+[ext_resource type="FontFile" uid="uid://b8v3wi1cuh2pa" path="res://Asset/font/MilkyNice.ttf" id="6_h17c0"]
+[ext_resource type="Script" path="res://Script/ScrollRolesList.gd" id="6_i6286"]
+[ext_resource type="PackedScene" uid="uid://b5bx7cdb6upyj" path="res://Scene/ListOrderElement.tscn" id="7_4gqvf"]
+[ext_resource type="Texture2D" uid="uid://bjfhlmp5l8vcv" path="res://Asset/Buttons/btnOk.png" id="7_v04e4"]
 
 [node name="Night" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_73da7")
+
+[node name="ConfirmOrder" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="ConfirmOrder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -461.0
+offset_top = -568.0
+offset_right = 461.0
+offset_bottom = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8hy17")
+ignore_texture_size = true
+
+[node name="listBackGround" type="TextureRect" parent="ConfirmOrder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -362.0
+offset_right = 330.0
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_p1sb5")
+ignore_texture_size = true
+
+[node name="labelTitle" type="Label" parent="ConfirmOrder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -283.0
+offset_top = -487.0
+offset_right = 294.0
+offset_bottom = -377.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_h17c0")
+theme_override_font_sizes/font_size = 43
+text = "The following roles are called in order:"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ScrollRolesList" type="ScrollContainer" parent="ConfirmOrder"]
+custom_minimum_size = Vector2i(580, 618)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -290.0
+offset_top = -321.5
+offset_right = 290.0
+offset_bottom = 321.5
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+horizontal_scroll_mode = 3
+script = ExtResource("6_i6286")
+role_element_scene = ExtResource("7_4gqvf")
+role_list = ExtResource("6_3h8ng")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmOrder/ScrollRolesList"]
+layout_mode = 2
+
+[node name="btnConfirm" type="TextureButton" parent="ConfirmOrder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -202.0
+offset_top = 399.0
+offset_right = 202.0
+offset_bottom = 525.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("7_v04e4")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="text" type="Label" parent="ConfirmOrder/btnConfirm"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -31.5
+offset_right = 48.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_h17c0")
+theme_override_font_sizes/font_size = 50
+text = "Let's go"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Title" type="Control" parent="."]
 layout_mode = 1
@@ -58,7 +185,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="btnExit" type="TextureButton" parent="."]
-layout_mode = 1
+layout_mode = 0
 offset_left = 63.0
 offset_top = 140.0
 offset_right = 130.0

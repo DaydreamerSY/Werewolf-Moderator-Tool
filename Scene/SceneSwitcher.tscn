@@ -13,4 +13,3 @@ grow_vertical = 2
 script = ExtResource("1_mj5ss")
 
 [node name="Home" parent="." instance=ExtResource("2_0igur")]
-layout_mode = 1

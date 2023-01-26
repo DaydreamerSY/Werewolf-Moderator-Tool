@@ -10,6 +10,11 @@ config_version=5
 
 _global_script_classes=[{
 "base": "Resource",
+"class": &"ResourceOrderRole",
+"language": &"GDScript",
+"path": "res://Custom Resource/ResourceOrderRole.gd"
+}, {
+"base": "Resource",
 "class": &"ResourcePlayers",
 "language": &"GDScript",
 "path": "res://Custom Resource/ResourcePlayer.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[{
 "path": "res://Custom Resource/ResourceRoles.gd"
 }]
 _global_script_class_icons={
+"ResourceOrderRole": "",
 "ResourcePlayers": "",
 "ResourceRoles": ""
 }
@@ -35,13 +41,13 @@ config/icon="res://icon.png"
 
 window/size/viewport_width=1080
 window/size/viewport_height=1920
+window/size/window_width_override=576
+window/size/window_height_override=1024
 window/handheld/orientation=6
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/size/width=1080
 window/size/height=1920
-window/size/test_width=576
-window/size/test_height=1024
 window/dpi/allow_hidpi.Android=false
 
 [editor_plugins]
@@ -50,6 +56,7 @@ enabled=PackedStringArray()
 
 [gui]
 
+common/default_scroll_deadzone=10
 fonts/stretch/mode="canvas_items"
 
 [input_devices]

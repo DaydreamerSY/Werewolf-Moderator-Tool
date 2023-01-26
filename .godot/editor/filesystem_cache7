@@ -1,17 +1,21 @@
 0b7126e0c6e86d3ec295a72f5aa6e0bd
-::res://::1674657393
+::res://::1674717220
 export_presets.cfg::TextFile::-1::1674634924::0::1::::<><>::
 icon.png::CompressedTexture2D::4831812399819432145::1674634924::1674635531::1::::<><>::
 README.md::TextFile::-1::1674634924::0::1::::<><>::
-::res://Asset/::1674657381
-::res://Asset/Buttons/::1674657393
+::res://Asset/::1674667984
+::res://Asset/Buttons/::1674708855
+Asset96.png::CompressedTexture2D::8466469857262240825::1674667980::1674667984::1::::<><>::
+Asset97.png::CompressedTexture2D::5652804669736976502::1674708855::1674708855::1::::<><>::
 btnDanger.png::CompressedTexture2D::5151870427533052336::1674634924::1674635531::1::::<><>::
 btnList.png::CompressedTexture2D::5772776510545129366::1674634924::1674635531::1::::<><>::
 btnOk.png::CompressedTexture2D::3028887482719362277::1674634924::1674635531::1::::<><>::
 button.gd::GDScript::-1::1674642877::0::1::::<>TextureButton<>::
 IconAdd.png::CompressedTexture2D::6607438591776830719::1674634924::1674638317::1::::<><>::
+IconArrowDown.png::CompressedTexture2D::6715560866102684488::1674668465::1674668465::1::::<><>::
 IconArrowLeft.png::CompressedTexture2D::7379137957528144752::1674644075::1674644098::1::::<><>::
 IconArrowRight.png::CompressedTexture2D::1700147565046497407::1674644075::1674644112::1::::<><>::
+IconArrowUp.png::CompressedTexture2D::6447222957016372621::1674668465::1674668465::1::::<><>::
 IconCheck.png::CompressedTexture2D::6752100716303622621::1674634924::1674638322::1::::<><>::
 IconDotsHorizontal.png::CompressedTexture2D::1144666362977736289::1674634924::1674638329::1::::<><>::
 IconDoubleArrow.png::CompressedTexture2D::6204701247595580455::1674644018::1674644120::1::::<><>::
@@ -44,25 +48,31 @@ Popup Title.tres::FontFile::-1::1674635514::0::1::::<><>::res://Asset/font/Milky
 Title.tres::FontFile::-1::1674635514::0::1::::<><>::res://Asset/font/MilkyNice.ttf
 ::res://Asset/Label/::1674635531
 Item4.png::CompressedTexture2D::798006696807494811::1674634924::1674635531::1::::<><>::
-::res://Custom Resource/::1674643372
+::res://Custom Resource/::1674717037
+ResourceOrderRole.gd::GDScript::-1::1674717037::0::1::::ResourceOrderRole<>Resource<>::
+ResourceOrderRole.tres::Resource::246662413515664726::1674662465::0::1::::<><>::res://Custom Resource/ResourceOrderRole.gd
 ResourcePlayer.gd::GDScript::-1::1674635514::0::1::::ResourcePlayers<>Resource<>::
 ResourcePlayer.tres::Resource::-1::1674637538::0::1::::<><>::res://Custom Resource/ResourcePlayer.gd
 ResourceRole.tres::Resource::-1::1674637545::0::1::::<><>::res://Custom Resource/ResourceRoles.gd
-ResourceRoles.gd::GDScript::-1::1674643372::0::1::::ResourceRoles<>Resource<>::
-::res://Scene/::1674657234
-Home.tscn::PackedScene::3607193977335606703::1674656890::0::1::::<><>::res://Script/MovePoint.gd<>res://Asset/font/Title.tres<>res://Script/PopupAddPlayer.gd<>res://Script/InterfaceController.gd<>res://Script/PopupUpdatePlayer.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://dwh4hm4pnldip<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://dae5e43qvstfs<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://dderlauwjvbk7<>uid://bsowx5etl2bg<>uid://yhtggnnmbnml<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
+ResourceRoles.gd::GDScript::-1::1674715338::0::1::::ResourceRoles<>Resource<>::
+::res://Scene/::1674717220
+Home.tscn::PackedScene::3607193977335606703::1674717134::0::1::::<><>::res://Script/MovePoint.gd<>res://Asset/font/Title.tres<>res://Script/PopupAddPlayer.gd<>res://Script/InterfaceController.gd<>res://Script/PopupUpdatePlayer.gd<>uid://25blc46js2f0<>uid://cfnus2sxtykm7<>uid://bjfhlmp5l8vcv<>uid://dygh8ikk7pt5r<>uid://lmtb3c4re8jv<>uid://b8v3wi1cuh2pa<>uid://c1exsv1le6if4<>uid://dpfftg16kumn4<>uid://3hx667r4drl6<>uid://dwh4hm4pnldip<>res://Script/Roles.gd<>res://Script/Players.gd<>res://Custom Resource/ResourcePlayer.tres<>res://Asset/Buttons/button.gd<>res://Custom Resource/ResourceRole.tres<>uid://dae5e43qvstfs<>uid://qkqqt361lxmv<>uid://fchds0tojmwx<>uid://dagewp2cj8ls0<>uid://djmidgce1gb7r<>uid://c4p1dx5vpswfo<>uid://dockm6qah8bwl<>uid://bom30hq1ofrmj<>uid://eu1xy7c1bbwy<>uid://b82k3nt2vqhma<>uid://dderlauwjvbk7<>uid://bsowx5etl2bg<>uid://yhtggnnmbnml<>uid://bx5lrk6xa64tl<>uid://uwqs6dpd25f2<>uid://cyqbou0uc4wac
+ListOrderElement.tscn::PackedScene::4495604116595497317::1674717220::0::1::::<><>::res://Asset/Buttons/Asset96.png<>res://Asset/font/MilkyNice.ttf<>res://Script/ListOrderElement.gd<>res://Asset/Buttons/IconArrowUp.png<>res://Asset/Buttons/IconArrowDown.png
 ListPlayerElement.tscn::PackedScene::8719641224520865395::1674642019::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListPlayerElement.gd<>uid://b8v3wi1cuh2pa<>uid://b8lvtu6wyxcis
-ListRoleElement.tscn::PackedScene::7169349782241593064::1674642019::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListRoleElement.gd<>uid://b8v3wi1cuh2pa<>uid://c3g1d2275ia82
-Night.tscn::PackedScene::2848291362682084058::1674655497::0::1::::<><>::uid://lmtb3c4re8jv<>res://Asset/font/Title.tres
-SceneSwitcher.tscn::PackedScene::3238180542178333174::1674656111::0::1::::<><>::res://Script/SceneSwitcher.gd<>uid://brnl7tg7bbbtn
-::res://Script/::1674656890
+ListRoleElement.tscn::PackedScene::7169349782241593064::1674668347::0::1::::<><>::uid://b4qiyacx4sf2l<>res://Script/ListRoleElement.gd<>uid://b8v3wi1cuh2pa<>uid://c3g1d2275ia82
+Night.tscn::PackedScene::3720164884299231097::1674717228::0::1::::<><>::res://Script/Night.gd<>uid://lmtb3c4re8jv<>res://Asset/font/Title.tres<>uid://cmsi4qjtl3r87<>uid://calypatmriqnx<>uid://dygh8ikk7pt5r<>uid://drqq170ojokc<>uid://b8v3wi1cuh2pa<>res://Script/SCrollRolesList.gd<>uid://b5bx7cdb6upyj<>uid://bjfhlmp5l8vcv
+SceneSwitcher.tscn::PackedScene::3238180542178333174::1674716951::0::1::::<><>::res://Script/SceneSwitcher.gd<>uid://brnl7tg7bbbtn
+::res://Script/::1674717220
 InterfaceController.gd::GDScript::-1::1674642441::0::1::::<>Control<>::
+ListOrderElement.gd::GDScript::-1::1674672723::0::1::::<>TextureRect<>::
 ListPlayerElement.gd::GDScript::-1::1674641976::0::1::::<>TextureButton<>::
 ListRoleElement.gd::GDScript::-1::1674635514::0::1::::<>TextureButton<>::
-MovePoint.gd::GDScript::-1::1674656244::0::1::::<>Node<>::
-Players.gd::GDScript::-1::1674642549::0::1::::<>Control<>::
+MovePoint.gd::GDScript::-1::1674657622::0::1::::<>Node<>::
+Night.gd::GDScript::-1::1674709506::0::1::::<>Control<>::
+Players.gd::GDScript::-1::1674714318::0::1::::<>Control<>::
 PopupAddPlayer.gd::GDScript::-1::1674639420::0::1::::<>Control<>::
 PopupRoleSelect.gd::GDScript::-1::1674635514::0::1::::<>Control<>::
 PopupUpdatePlayer.gd::GDScript::-1::1674642973::0::1::::<>Control<>::
-Roles.gd::GDScript::-1::1674642526::0::1::::<>Control<>::
-SceneSwitcher.gd::GDScript::-1::1674656890::0::1::::<>Control<>::
+Roles.gd::GDScript::-1::1674658510::0::1::::<>Control<>::
+SceneSwitcher.gd::GDScript::-1::1674658835::0::1::::<>Control<>::
+SCrollRolesList.gd::GDScript::-1::1674717134::0::1::::<>ScrollContainer<>::

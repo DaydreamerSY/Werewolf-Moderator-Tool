@@ -76,7 +76,6 @@ func _get_list():
 
 
 
-
 # SET funcs
 
 func _trigger_select(name):
